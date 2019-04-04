@@ -39,7 +39,8 @@ for developer in request_developers:
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
     print(len(developer_data))
 
-    existing_data = pd.read_csv("data.csv")
+    try:
+        existing_data = pd.read_csv("data.csv")
 
 
 
