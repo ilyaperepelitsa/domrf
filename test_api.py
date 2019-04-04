@@ -35,9 +35,21 @@ for developer in request_developers:
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
     print(len(developer_data))
     with open('data.csv', 'a', newline = "") as fp:
+
         for developer_datum in developer_data:
+            headers = developer_datum.keys()
             a = csv.writer(fp, delimiter=',')
             a.writerows(developer_datum)
+
+            headers = ['TimeStamp', 'light', 'Proximity']
+    writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers)
+
+    if not file_exists:
+        writer.writeheader()  # file doesn't exist yet, write a header
+
+    writer.writerow({'TimeStamp': dic['ts'], 'light': dic['light'], 'Proximity': dic['prox']})
+
+
 # developer_data
 # developer_datum
     # Use if need to have both dev id and dev name
