@@ -25,7 +25,7 @@ developer = [elem for elem in filter(lambda x: x['developer_group_id'] == '42972
 
 for developer in request_developers:
 
-    DETAILED_DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
+    DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
 developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
 developer_data = developer_bod.json()
