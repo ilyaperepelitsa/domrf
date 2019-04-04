@@ -18,7 +18,7 @@ request_data = request_bod.json()
 
 429726001
 from itertools import filter
-for elem in filter(lambda x: x['type'] in keyValList, exampleSet)
+for elem in filter(lambda x: x['type'] in keyValList, request_data)
 
 developer = request_data[200]
 
