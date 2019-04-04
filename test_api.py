@@ -33,6 +33,9 @@ for developer in request_developers:
     time.sleep(random.random() * 3)
 
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
+    REPORT_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/entityInfoDateRange?id={developer_id}&type=devGroup"
+    REPORT_ENDPOINT = REPORT_ENDPOINT.format(**{"developer_id"
+    requests.get(url= : developer["developer_group_id"]}), headers=headers).json()
 
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
@@ -41,6 +44,8 @@ for developer in request_developers:
 
     try:
         existing_data = pd.read_csv("data.csv")
+    except:
+
 
 
 
@@ -73,8 +78,14 @@ for developer in request_developers:
 
 
 
-
+developer["developer_group_id"]
 # developer_data
+
+SAD = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/entityInfoDateRange?id={429726001}&type=devGroup".format(**{"developer_id" : developer["developer_group_id"]})
+requests.get(url="https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/entityInfoDateRange?id={developer_id}&type=devGroup".format(**{"developer_id" : developer["developer_group_id"]}), headers=headers).json()
+
+
+
 developer_datum.keys()
     # Use if need to have both dev id and dev name
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
