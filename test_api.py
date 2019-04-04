@@ -17,6 +17,9 @@ request_bod = requests.get(url=API_ENDPOINT, headers=headers)
 request_data = request_bod.json()
 
 429726001
+from itertools import ifilter
+for elem in ifilter(lambda x: x['type'] in keyValList, exampleSet)
+
 developer = request_data[200]
 
 DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}".format(**{"developer_id" : developer["developer_group_id"]})
