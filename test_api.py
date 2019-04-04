@@ -14,7 +14,7 @@ headers = requests.utils.default_headers()
 headers['User-Agent'] = ua.random
 
 request_bod = requests.get(url=API_ENDPOINT, headers=headers)
-request_data = request_bod.json()
+request_developers = request_bod.json()
 
 
 # from itertools import filter
@@ -23,7 +23,7 @@ developer = [elem for elem in filter(lambda x: x['developer_group_id'] == '42972
 # request_data[0]
 # developer = request_data[200]
 
-for de
+for developer in
 DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}"
 DETAILED_DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
