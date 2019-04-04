@@ -22,7 +22,7 @@ DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/анали�
 DETAILED_DEVELOPER_ENDPOINT
 
 developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
-developer_data = request_bod.json()
+developer_data = developer_bod.json()
 
 # len(request_bod.json())
 #
