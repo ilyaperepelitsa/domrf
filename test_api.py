@@ -30,6 +30,9 @@ for developer in request_developers:
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
     developer_data
+
+    for key,val in dct.iteritems():
+        ret[val].append(key)
 # len(request_bod.json())
 #
 # pd.DataFrame(request_bod.json())
