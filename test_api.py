@@ -29,7 +29,7 @@ for developer in request_developers:
 
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
-    developer_data = [dict(dev_data, **dict(i, v for i, v in iteritems(developer) if ) for dev_data in developer_data]
+    developer_data = [dict(dev_data, **dict(k, v for i, v in iteritems(developer) if ) for dev_data in developer_data]
 
 
     for key,val in developer_data.iteritems():
