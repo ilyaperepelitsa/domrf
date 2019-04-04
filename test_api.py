@@ -37,9 +37,9 @@ for developer in request_developers:
 #
 # pd.DataFrame(request_bod.json())
 
-map(lambda x: x.update("developer_group_name", request_data[0]["developer_group_name"], developer_data)
+map(lambda x: x.update("developer_group_name", request_data[0]["developer_group_name"], developer_data))
 # for key,val in developer_data.iteritems():
-    ret[val].append(key)
+    # ret[val].append(key)
 
 
 import random
