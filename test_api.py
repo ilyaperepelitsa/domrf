@@ -24,8 +24,6 @@ developer = [elem for elem in filter(lambda x: x['developer_group_id'] == '42972
 # developer = request_data[200]
 
 DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}"
-
-
 DETAILED_DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
 developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
