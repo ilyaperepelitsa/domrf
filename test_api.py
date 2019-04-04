@@ -37,12 +37,13 @@ for developer in request_developers:
     with open('data.csv', 'a', newline = "") as fp:
         for developer_datum in developer_data:
             a = csv.writer(fp, delimiter=',')
+            a.writerows(developer_datum)
 # developer_data
 # developer_datum
     # Use if need to have both dev id and dev name
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
 
-    print(len(developer_data))
+    # print(len(developer_data))
 
     # for key,val in developer_data.iteritems():
     #     ret[val].append(key)
