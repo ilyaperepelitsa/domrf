@@ -17,8 +17,8 @@ request_bod = requests.get(url=API_ENDPOINT, headers=headers)
 request_data = request_bod.json()
 
 
-from itertools import filter
-elem for elem in filter(lambda x: x['developer_group_id'] == 429726001, request_data)
+# from itertools import filter
+[elem for elem in filter(lambda x: x['developer_group_id'] == 429726001, request_data)]
 
 developer = request_data[200]
 
