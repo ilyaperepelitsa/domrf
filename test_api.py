@@ -25,6 +25,11 @@ request_developers = request_bod.json()
 # request_data[0]
 # developer = request_data[200]
 import csv
+import os.path
+
+
+file_exists = os.path.isfile(data.csv)
+
 for developer in request_developers:
     time.sleep(random.random() * 3)
 
@@ -44,10 +49,10 @@ for developer in request_developers:
 
             writer.writerow(developer_datum)
 
-            a = csv.writer(fp, delimiter=',')
-            a.writerows(developer_datum)
-
-            headers = ['TimeStamp', 'light', 'Proximity']
+            # a = csv.writer(fp, delimiter=',')
+            # a.writerows(developer_datum)
+            #
+            # headers = ['TimeStamp', 'light', 'Proximity']
 
 
       # file doesn't exist yet, write a header
