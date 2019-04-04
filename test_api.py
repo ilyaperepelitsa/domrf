@@ -34,20 +34,25 @@ for developer in request_developers:
     developer_data = developer_bod.json()
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
     print(len(developer_data))
-    with open('data.csv', 'a', newline = "") as fp:
+    with open('data.csv', 'a', newline = "") as csvfile:
 
         for developer_datum in developer_data:
             headers = developer_datum.keys()
+            writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers)
+            if not file_exists:
+                writer.writeheader()
+
+            writer.writerow(developer_datum)
+
             a = csv.writer(fp, delimiter=',')
             a.writerows(developer_datum)
 
             headers = ['TimeStamp', 'light', 'Proximity']
-    writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers)
 
-    if not file_exists:
-        writer.writeheader()  # file doesn't exist yet, write a header
 
-    writer.writerow({'TimeStamp': dic['ts'], 'light': dic['light'], 'Proximity': dic['prox']})
+      # file doesn't exist yet, write a header
+
+
 
 
 # developer_data
