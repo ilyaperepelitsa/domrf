@@ -26,7 +26,7 @@ request_developers = request_bod.json()
 # developer = request_data[200]
 import csv
 for developer in request_developers:
-    time.sleep(random.random() * 10)
+    time.sleep(random.random() * 3)
 
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
