@@ -34,7 +34,7 @@ for developer in request_developers:
     developer_data = developer_bod.json()
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
 
-    with open('data.csv', 'a', newline = "\n") as fp:
+    with open('data.csv', 'a', newline = "") as fp:
         for developer_datum in developer_data:
             a = csv.writer(fp, delimiter=',')
 developer_data
