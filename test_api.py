@@ -27,8 +27,7 @@ request_developers = request_bod.json()
 import csv
 import os.path
 
-
-file_exists = os.path.isfile(data.csv)
+file_exists = os.path.isfile("data.csv")
 
 for developer in request_developers:
     time.sleep(random.random() * 3)
@@ -42,7 +41,7 @@ for developer in request_developers:
     with open('data.csv', 'a', newline = "") as csvfile:
 
         for developer_datum in developer_data:
-            headers = developer_datum.keys()
+            headers = list(developer_datum.keys())
             writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers)
             if not file_exists:
                 writer.writeheader()
