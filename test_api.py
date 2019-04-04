@@ -11,7 +11,7 @@ headers = requests.utils.default_headers()
 headers['User-Agent'] = ua.random
 
 request_bod = requests.get(url=API_ENDPOINT, headers=headers)
-
+request_data = re
 # len(request_bod.json())
 #
 # pd.DataFrame(request_bod.json())
