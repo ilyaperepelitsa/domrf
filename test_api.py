@@ -18,7 +18,7 @@ request_data = request_bod.json()
 
 
 from itertools import filter
-for elem in filter(lambda x: x['developer_group_id'] == 429726001, request_data)
+elem for elem in filter(lambda x: x['developer_group_id'] == 429726001, request_data)
 
 developer = request_data[200]
 
