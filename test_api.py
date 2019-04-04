@@ -29,14 +29,16 @@ for developer in request_developers:
 
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
-    developer_data
 
-    for key,val in dct.iteritems():
+
+    for key,val in developer_data.iteritems():
         ret[val].append(key)
 # len(request_bod.json())
 #
 # pd.DataFrame(request_bod.json())
-
+for key,val in developer_data.iteritems():
+    ret[val].append(key)
+    
 
 import random
 # https://xn--80az8a.xn--d1aqf.xn--p1ai/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0/grapi/v1/geoObjects
