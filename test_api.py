@@ -21,7 +21,7 @@ request_data = request_bod.json()
 developer = [elem for elem in filter(lambda x: x['developer_group_id'] == '429726001', request_data)][0]
 # [elem for elem in request_data if elem['developer_group_id'] == 429726001]
 # request_data[0]
-developer = request_data[200]
+# developer = request_data[200]
 
 DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}".format(**{"developer_id" : developer["developer_group_id"]})
 DETAILED_DEVELOPER_ENDPOINT
