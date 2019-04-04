@@ -21,8 +21,8 @@ request_data[0]
 DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}".format(**{"developer_id" : request_data[0]["developer_group_id"]})
 DETAILED_DEVELOPER_ENDPOINT
 
-request_bod = requests.get(url=API_ENDPOINT, headers=headers)
-request_data = request_bod.json()
+developer_bod = requests.get(url=API_ENDPOINT, headers=headers)
+developer_data = request_bod.json()
 
 # len(request_bod.json())
 #
