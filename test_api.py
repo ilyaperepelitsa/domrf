@@ -24,7 +24,7 @@ request_developers = request_bod.json()
 # [elem for elem in request_data if elem['developer_group_id'] == 429726001]
 # request_data[0]
 # developer = request_data[200]
-
+import csv
 for developer in request_developers:
     time.sleep(random.random() * 10)
 
@@ -35,9 +35,9 @@ for developer in request_developers:
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
 
     with open('data.csv', 'a', newline='') as fp:
-    for developer_datum in developer_data:
-        a = csv.writer(fp, delimiter=',')
-        a.writerows(developer_datum);
+        for developer_datum in developer_data:
+            a = csv.writer(fp, delimiter=',')
+            a.writerows(developer_datum)
 
     # Use if need to have both dev id and dev name
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
