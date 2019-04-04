@@ -43,11 +43,11 @@ for developer in request_developers:
         for developer_datum in developer_data:
             # developer_datum =
             headers_csv = list(developer_datum.keys())
-            writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers_csv, dialect='excel',)
+            writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers_csv, dialect='excel')
             if not file_exists:
                 writer.writeheader()
 
-            writer.writerow(developer_datum)
+            writer.writerow({k:v.encode('utf8') for k,v in developer_datum.items()})
 
 # developer_datum
 
