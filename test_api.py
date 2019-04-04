@@ -22,4 +22,4 @@ request_data = request_bod.json()
 
 import random
 # https://xn--80az8a.xn--d1aqf.xn--p1ai/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0/grapi/v1/geoObjects
-[random.random() * 5 for i in range(10)]
+# [random.random() * 5 for i in range(10)]
