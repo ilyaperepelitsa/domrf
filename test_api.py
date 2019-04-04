@@ -27,8 +27,8 @@ for developer in request_developers:
 
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
-    developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
-    developer_data = developer_bod.json()
+r_data = developer_bod.json()developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
+develope
 
 
     for key,val in developer_data.iteritems():
@@ -37,7 +37,7 @@ for developer in request_developers:
 #
 # pd.DataFrame(request_bod.json())
 
-list(map(lambda x: x.update({"developer_group_name" : request_data[0]["developer_group_name"]}), developer_data)
+map(lambda x: x.update({"developer_group_name" : request_data[0]["developer_group_name"]}), developer_data)
 developer_data
 # for key,val in developer_data.iteritems():
     # ret[val].append(key)
