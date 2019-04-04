@@ -1,6 +1,8 @@
 import requests
 from fake_useragent import UserAgent
 import pandas as pd
+import time
+
 ua = UserAgent()
 
 # API_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/geoObjects"
@@ -24,6 +26,7 @@ request_developers = request_bod.json()
 # developer = request_data[200]
 
 for developer in request_developers:
+    time.sleep(30)
 
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
