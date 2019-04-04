@@ -41,7 +41,7 @@ for developer in request_developers:
     with open('data.csv', 'a', newline = "") as csvfile:
 
         for developer_datum in developer_data:
-            headers = list(developer_datum.keys())
+            headers_csv = list(developer_datum.keys())
             writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers)
             if not file_exists:
                 writer.writeheader()
@@ -60,7 +60,7 @@ for developer in request_developers:
 
 
 # developer_data
-# developer_datum
+developer_datum.keys()
     # Use if need to have both dev id and dev name
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
 
