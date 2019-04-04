@@ -18,7 +18,7 @@ request_data = request_bod.json()
 
 request_data[0]
 
-DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}"
+DETAILED_DEVELOPER_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}".format()
 
 # len(request_bod.json())
 #
