@@ -20,7 +20,7 @@ request_developers = request_bod.json()
 # from itertools import filter
 developer = [elem for elem in filter(lambda x: x['developer_group_id'] == '429726001', request_data)][0]
 # [elem for elem in request_data if elem['developer_group_id'] == 429726001]
-# request_data[0]
+request_data[0]
 # developer = request_data[200]
 
 for developer in request_developers:
@@ -29,7 +29,7 @@ for developer in request_developers:
 
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
-developer_data
+    developer_data
 # len(request_bod.json())
 #
 # pd.DataFrame(request_bod.json())
