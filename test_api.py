@@ -41,12 +41,15 @@ for developer in request_developers:
     with open('data.csv', 'a', newline = "") as csvfile:
 
         for developer_datum in developer_data:
+            # developer_datum =
             headers_csv = list(developer_datum.keys())
-            writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers_csv)
+            writer = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n',fieldnames=headers_csv, , encoding='utf-8')
             if not file_exists:
                 writer.writeheader()
 
             writer.writerow(developer_datum)
+developer_datum
+
 
             # a = csv.writer(fp, delimiter=',')
             # a.writerows(developer_datum)
