@@ -26,7 +26,7 @@ request_developers = request_bod.json()
 # developer = request_data[200]
 
 for developer in request_developers:
-    time.sleep(random.random() * 3)
+    time.sleep(random.random() * 10)
 
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
@@ -39,8 +39,8 @@ for developer in request_developers:
 
     print(len(developer_data))
 
-    for key,val in developer_data.iteritems():
-        ret[val].append(key)
+    # for key,val in developer_data.iteritems():
+    #     ret[val].append(key)
 # len(request_bod.json())
 #
 # pd.DataFrame(request_bod.json())
