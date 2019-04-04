@@ -35,7 +35,8 @@ for developer in request_developers:
     DETAILED_DEVELOPER_ENDPOINT = DEVELOPER_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
     REPORT_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/entityInfoDateRange?id={developer_id}&type=devGroup"
     REPORT_ENDPOINT = REPORT_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
-    requests.get(url= : developer["developer_group_id"]}), headers=headers).json()
+
+    requests.get(url= : developer["developer_group_id"]}), headers=headers).json()["payload"]
 
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
