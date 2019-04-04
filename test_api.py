@@ -37,7 +37,7 @@ for developer in request_developers:
 #
 # pd.DataFrame(request_bod.json())
 
-map(lambda x: x["developer_"])
+map(lambda x: x["developer_group_name"] )
 for key,val in developer_data.iteritems():
     ret[val].append(key)
 
