@@ -30,10 +30,11 @@ for developer in request_developers:
     developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
     developer_data = developer_bod.json()
     developer_data = [dict(dev_data, **{k: v for k, v in request_data[0].items() if k == "developer_group_id"}) for dev_data in developer_data]
+
     # Use if need to have both dev id and dev name
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
 
-developer_data
+    print(len(developer_data))
 
     for key,val in developer_data.iteritems():
         ret[val].append(key)
