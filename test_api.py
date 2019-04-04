@@ -1,6 +1,6 @@
 import requests
 from fake_useragent import UserAgent
-ш
+import pandas as pd
 ua = UserAgent()
 
 # API_ENDPOINT = "https://xn--80az8a.xn--d1aqf.xn--p1ai/аналитика/grapi/v1/geoObjects"
