@@ -18,7 +18,7 @@ request_data = request_bod.json()
 
 request_data[0]
 
-DETAI
+DETAILED_DEVELOPER_EN
 
 # len(request_bod.json())
 #
