@@ -49,7 +49,7 @@ for developer in request_developers:
     # developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
 
     # Cast all developer data on entries
-    developer_data = [dict(dev_data, **developer) for dev_data in developer_data]
+    developer_data = [dict(dev_data, **report_data) for dev_data in developer_data]
 
     print(len(developer_data))
 
