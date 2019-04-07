@@ -18,3 +18,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield PR
 
     def parse(self, response):
+        
