@@ -54,8 +54,7 @@ class Region(Base_item):
     region_name = Column(TEXT, nullable=False)
 
     def __repr__(self):
-        return "<Base_item(region_id='%s', developer_group_name='%s',\
-                            developer_group_address='%s')>"\
+        return "<Base_item(region_id='%s', region_name='%s')>"\
         %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
 
 
