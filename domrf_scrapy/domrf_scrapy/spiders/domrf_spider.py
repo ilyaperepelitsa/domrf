@@ -43,4 +43,4 @@ class DomrfSpiderSpider(scrapy.Spider):
 
         return {"pew" : json.loads(response.body_as_unicode())}
 
-    def parse_list(self, response):
+    def parse_developer_detai(self, response):
