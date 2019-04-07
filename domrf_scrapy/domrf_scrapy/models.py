@@ -70,7 +70,7 @@ class DeveloperData(Base_item):
     appt_num = Column(INTEGER)
     object_count = Column(INTEGER)
     total_living_floor_size_pct = Column(FLOAT)
-    typed_volume_pct = Column(INTEGER)
+    typed_volume_pct = Column(FLOAT)
     rating = Column(INTEGER)
 
     def __repr__(self):
