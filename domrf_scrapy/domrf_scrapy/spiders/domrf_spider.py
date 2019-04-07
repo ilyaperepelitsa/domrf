@@ -84,7 +84,7 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
 
-        article = ItemLoader(item = DomRFItem(), response = response)
+        domrf = ItemLoader(item = DomRFItem(), response = response)
 
         # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
         article.add_value('source', "glassdoor")
