@@ -88,7 +88,12 @@ class DataPipeline(object):
                     Developer.developer_group_id == developer_entry['developer_group_id'],
                     Developer.developer_group_name == developer_entry['developer_group_name'],
                     Developer.developer_group_address == developer_entry['developer_group_address'],
-
+                    Developer.developer_group_id == developer_entry['developer_group_id'],
+                    Developer.developer_group_name == developer_entry['developer_group_name'],
+                    Developer.developer_group_address == developer_entry['developer_group_address'],
+                    Developer.developer_group_id == developer_entry['developer_group_id'],
+                    Developer.developer_group_name == developer_entry['developer_group_name'],
+                    Developer.developer_group_address == developer_entry['developer_group_address'],
                     ))).scalar()
 
         if not data_exists:
