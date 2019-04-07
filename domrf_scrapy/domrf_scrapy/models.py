@@ -42,11 +42,6 @@ class Developer(Base_item):
     developer_group_id = Column(INTEGER, primary_key = True)
     developer_group_name = Column(TEXT, nullable=False)
     developer_group_address = Column(TEXT, nullable=True)
-    article_text = Column(TEXT)
-    author_id = Column(ARRAY(INTEGER, dimensions=1), nullable=False)
-    date_published = Column(TIMESTAMP)
-    date_scraped = Column(TIMESTAMP) # '2016-06-22 19:10:25-07'
-    source_id = Column(INTEGER, ForeignKey("sources.source_id"), nullable=False)
 
     def __repr__(self):
         return "<Base_item(url='%s', article_text='%s', author_id='%s',\
