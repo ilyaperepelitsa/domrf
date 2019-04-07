@@ -67,9 +67,9 @@ class DeveloperData(Base_item):
     endDate = Column(VARCHAR(20))
 
     total_living_floor_size = Column(INTEGER)
-    source_id = Column(INTEGER, primary_key = True)
-    source_id = Column(INTEGER, primary_key = True)
-    source_id = Column(INTEGER, primary_key = True)
+    appt_num = Column(INTEGER, primary_key = True)
+    object_count = Column(INTEGER, primary_key = True)
+    total_living_floor_size_pct = Column(INTEGER, primary_key = True)
     source_id = Column(INTEGER, primary_key = True)
 
     total_living_floor_size = Field()
