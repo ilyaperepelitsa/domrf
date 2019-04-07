@@ -36,6 +36,7 @@ class DomrfScrapyPipeline(object):
 class DeveloperPipeline(object):
     def process_item(self, item, spider):
 
+        
 
         yield item
 
@@ -46,7 +47,7 @@ class RegionPipeline(object):
 
         yield item
 
-class Data(object):
+class DataPipeline(object):
     def process_item(self, item, spider):
 
 
