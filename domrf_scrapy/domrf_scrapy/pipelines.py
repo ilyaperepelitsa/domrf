@@ -74,8 +74,8 @@ class DataPipeline(object):
     def process_item(self, item, spider):
 
         data_entry = {"developer_group_id" : item["developer_group_id"],
-                            "developer_group_name" : item["developer_group_name"],
-                            "developer_group_address" : item["developer_group_address"]}
+                            "region_id" : item["developer_group_name"],
+                            "startDate" : item["developer_group_address"]}
 
         data_exists = session_test.query(exists().where(and_(
                     Developer.developer_group_id == developer_entry['developer_group_id'],
