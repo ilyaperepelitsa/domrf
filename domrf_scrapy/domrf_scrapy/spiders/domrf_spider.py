@@ -9,4 +9,4 @@ class DomrfSpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         # yield {"pew" : dir(response)}
-        yield {"pew" : response}
+        yield {"pew" : response.body}
