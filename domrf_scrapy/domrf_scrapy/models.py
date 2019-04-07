@@ -48,6 +48,18 @@ class Developer(Base_item):
                             developer_group_address='%s')>"\
         %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
 
+class Developer(Base_item):
+    __tablename__ = "developers"
+    developer_group_id = Column(INTEGER, primary_key = True)
+    developer_group_name = Column(TEXT, nullable=False)
+    developer_group_address = Column(TEXT, nullable=True)
+
+    def __repr__(self):
+        return "<Base_item(developer_group_id='%s', developer_group_name='%s',\
+                            developer_group_address='%s')>"\
+        %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
+
+
 class DeveloperData(Base_item):
     __tablename__ = "authors"
     id = Column(INTEGER, primary_key = True)
