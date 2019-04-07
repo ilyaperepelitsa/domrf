@@ -78,8 +78,8 @@ class DataPipeline(object):
                             "startDate" : item["startDate"],
                             "endDate" : item["endDate"],
                             "total_living_floor_size" : item["total_living_floor_size"],
-                            "appt_num" : item["developer_group_name"],
-                            "object_count" : item["developer_group_name"],
+                            "appt_num" : item["appt_num"],
+                            "object_count" : item["object_count"],
                             "total_living_floor_size_pct" : item["developer_group_name"],
                             "typed_volume_pct" : item["developer_group_name"],
                             "rating" : item["developer_group_name"]}
