@@ -22,5 +22,4 @@ class FercItem(scrapy.Item):
     total_living_floor_size_pct = Field()
     typed_volume_pct = Field()
     rating = Field()
-    object_count = Field()
     pass
