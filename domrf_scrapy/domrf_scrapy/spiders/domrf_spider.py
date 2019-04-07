@@ -28,4 +28,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield PR
 
     def parse_list(self, response):
-        return response.headers
+        return response.body
