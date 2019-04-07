@@ -91,9 +91,10 @@ class DomrfSpiderSpider(scrapy.Spider):
 
                 # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
                 domrf_item.add_value('developer_group_id', "glassdoor")
-                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('developer_group_name', 'test')
 
                 domrf_item.add_value('name', 'test')
+
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
