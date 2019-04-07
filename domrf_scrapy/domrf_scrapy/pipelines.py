@@ -21,9 +21,9 @@ class DomrfScrapyPipeline(object):
         item["region_name"] = item["region_name"][0]
 
         item["startDate"] = item["startDate"][0]
-        item["endDate"] = item["url"][0]
+        item["endDate"] = item["endDate"][0]
 
-        item["total_living_floor_size"] = item["url"][0]
+        item["total_living_floor_size"] = item["total_living_floor_size"][0]
         item["appt_num"] = item["url"][0]
         item["object_count"] = item["url"][0]
         item["total_living_floor_size_pct"] = item["url"][0]
