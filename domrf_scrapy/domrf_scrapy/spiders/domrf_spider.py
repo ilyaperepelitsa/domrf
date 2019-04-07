@@ -59,4 +59,6 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield alt_details_request
 
 
-    def alt_details(self, response):
+    def parse_alt_details(self, response):
+        developer = response.meta['developer']
+        developer_data = json.loads(response.body_as_unicode())
