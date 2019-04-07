@@ -25,4 +25,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         )
         return PR
 
-    def parse(self, response):
+    def parse_list(self, response):
