@@ -64,7 +64,7 @@ class DeveloperData(Base_item):
     developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
     region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
     startDate = Column(VARCHAR(20))
-    endDate = Column(VARCHAR(20), unique = True)
+    endDate = Column(VARCHAR(20))
 
     def __repr__(self):
         return "<Base_item(author_id='%s', author_name='%s')>"\
