@@ -28,4 +28,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield PR
 
     def parse_list(self, response):
-        return {"pew" : response.body}
+        return {"pew" : json.loads(response.body_as_unicode())}
