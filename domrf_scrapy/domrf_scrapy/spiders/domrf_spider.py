@@ -91,7 +91,7 @@ class DomrfSpiderSpider(scrapy.Spider):
 
                 # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
                 domrf_item.add_value('developer_group_id', developer["developer_group_id"])
-                domrf_item.add_value('developer_group_name', developer)
+                domrf_item.add_value('developer_group_name', developer["developer_group_id"])
 
                 if type(developer_group_address) is list:
                     domrf_item.add_value('developer_group_address', '')
