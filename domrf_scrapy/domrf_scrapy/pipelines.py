@@ -43,7 +43,7 @@ class DeveloperPipeline(object):
         developer_exists = session_test.query(exists().where(and_(
                     User.name == 'leela',
                     User.fullname == 'leela dharan',
-                    and_(User.name == 'leela'))).scalar()
+                    and_(User.name == 'leela')))).scalar()
         filter(and_(User.name == 'leela', User.fullname == 'leela dharan'))
         if not url_exists:
             adding_url = Url_entry(**url_entry)
