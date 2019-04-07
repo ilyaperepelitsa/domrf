@@ -106,8 +106,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('endDate', 'test')
 
                 domrf_item.add_value('total_living_floor_size', 'test')
-                domrf_item.add_value('name', 'test')
-                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('appt_num', 'test')
+                domrf_item.add_value('object_count', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
