@@ -82,12 +82,14 @@ class DataPipeline(object):
                             "object_count" : item["object_count"],
                             "total_living_floor_size_pct" : item["total_living_floor_size_pct"],
                             "typed_volume_pct" : item["typed_volume_pct"],
-                            "rating" : item["developer_group_name"]}
+                            "rating" : item["rating"]}
 
         data_exists = session_test.query(exists().where(and_(
                     Developer.developer_group_id == developer_entry['developer_group_id'],
                     Developer.developer_group_name == developer_entry['developer_group_name'],
-                    Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
+                    Developer.developer_group_address == developer_entry['developer_group_address'],
+
+                    ))).scalar()
 
         if not data_exists:
             adding_data = DeveloperData(**data_entry)
