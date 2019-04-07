@@ -12,5 +12,21 @@ from sqlalchemy.sql import exists
 
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
+
         item["url"] = "".join(item["url"])
+
+        developer_group_id = Field()
+        developer_group_name = Field()
+        developer_group_address = Field()
+        region_id = Field()
+        region_name = Field()
+        startDate = Field()
+        endDate = Field()
+        total_living_floor_size = Field()
+        appt_num = Field()
+        object_count = Field()
+        total_living_floor_size_pct = Field()
+        typed_volume_pct = Field()
+        rating = Field()
+        
         return item
