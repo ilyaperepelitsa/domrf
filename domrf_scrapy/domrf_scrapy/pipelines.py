@@ -25,7 +25,7 @@ class DomrfScrapyPipeline(object):
 
         item["total_living_floor_size"] = int(item["total_living_floor_size"][0])
         item["appt_num"] = int(item["appt_num"][0]
-        item["object_count"] = item["object_count"][0]
+        item["object_count"] = int(item["object_count"][0]
         item["total_living_floor_size_pct"] = item["total_living_floor_size_pct"][0]
         item["typed_volume_pct"] = item["typed_volume_pct"][0]
         item["rating"] = item["rating"][0]
