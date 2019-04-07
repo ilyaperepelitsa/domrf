@@ -51,8 +51,7 @@ class Developer(Base_item):
 class Region(Base_item):
     __tablename__ = "developers"
     region_id = Column(INTEGER, primary_key = True)
-    developer_group_name = Column(TEXT, nullable=False)
-    developer_group_address = Column(TEXT, nullable=True)
+    region_name = Column(TEXT, nullable=False)
 
     def __repr__(self):
         return "<Base_item(developer_group_id='%s', developer_group_name='%s',\
