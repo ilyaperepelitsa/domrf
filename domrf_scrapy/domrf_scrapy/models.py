@@ -83,7 +83,7 @@ class DeveloperData(Base_item):
         %(self.id, self.developer_group_id,
             self.region_id, self.startDate,
             self.endDate, self.total_living_floor_size,
-            self.appt_num, self.author_name,
+            self.appt_num, self.object_count,
             self.author_id, self.author_name,)
 
 Base_item.metadata.create_all(engine_test)
