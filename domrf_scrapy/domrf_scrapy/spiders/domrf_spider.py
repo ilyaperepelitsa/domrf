@@ -23,7 +23,7 @@ class DomrfSpiderSpider(scrapy.Spider):
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
             callback=self.parse_list
         )
-        return PR
+        yield PR
 
     def parse_list(self, response):
-        re
+        return
