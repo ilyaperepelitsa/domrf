@@ -11,8 +11,8 @@ class DomrfSpiderSpider(scrapy.Spider):
 
         PR = Request(
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-            headers=self.headers,
-            meta={'newrequest': Request('htp//sitetoscrape.com',  headers=self.headers),},
+            # headers=self.headers,
+            # meta={'newrequest': Request('htp//sitetoscrape.com',  headers=self.headers),},
             callback=self.parse_PR
         )
         yield PR
