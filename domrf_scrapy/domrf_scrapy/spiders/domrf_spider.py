@@ -100,12 +100,12 @@ class DomrfSpiderSpider(scrapy.Spider):
                             developer_group_address['developer_group_address'])
 
                 domrf_item.add_value('region_id', value)
-                domrf_item.add_value('region_name', 'test')
+                domrf_item.add_value('region_name', value)
 
                 domrf_item.add_value('startDate', 'test')
                 domrf_item.add_value('endDate', 'test')
 
-                domrf_item.add_value('total_living_floor_size', 'test')
+                domrf_item.add_value('total_living_floor_size', value)
                 domrf_item.add_value('appt_num', 'test')
                 domrf_item.add_value('object_count', 'test')
                 domrf_item.add_value('total_living_floor_size_pct', 'test')
