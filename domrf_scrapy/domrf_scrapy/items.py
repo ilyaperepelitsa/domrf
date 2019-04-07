@@ -9,6 +9,6 @@ import scrapy
 from scrapy.item import Item, Field
 
 class FercItem(scrapy.Item):
-    file_urls = Field()
+    developer_group_id = Field()
     files = Field()
     pass
