@@ -62,6 +62,6 @@ class DomrfSpiderSpider(scrapy.Spider):
     def parse_alt_details(self, response):
 
         developer = response.meta['developer']
-        developer = response.meta['developer']
-        
-        developer_data = json.loads(response.body_as_unicode())
+        developer_data = response.meta['developer_data']
+
+        developer_alt = json.loads(response.body_as_unicode())
