@@ -105,13 +105,8 @@ class DomrfSpiderSpider(scrapy.Spider):
         domrf_item.add_xpath("company_revenue", '//div[@class]/*[contains(text(), "Revenue")]/following-sibling::span[@class = "value"]/text()')
         domrf_item.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
         domrf_item.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_description", '//div[@id="EmpBasicInfo"]//div[@data-full]/@data-full')
-
-        article.add_xpath("rating_rating", '//div[@class="empStatsBody"]//div[@class="ratingNum"]/text()')
-        article.add_xpath("rating_recommend", '//div[@id="EmpStats_Recommend"]/@data-percentage')
-        article.add_xpath("rating_approve", '//div[@id="EmpStats_Approve"]/@data-percentage')
-
+        domrf_item.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
+        
         item = article.load_item()
         yield(item)
 
