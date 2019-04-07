@@ -36,8 +36,8 @@ class DomrfScrapyPipeline(object):
 class DeveloperPipeline(object):
     def process_item(self, item, spider):
 
-        developer_entry = {"developer_group_id" : item["url"],
-                            "url" : item["url"],
+        developer_entry = {"developer_group_id" : item["developer_group_id"],
+                            "developer_group_name" : item["url"],
                             "url" : item["url"]}
 
         url_exists = session_test.query(exists().where(Url_entry.url==item["url"])).scalar()
