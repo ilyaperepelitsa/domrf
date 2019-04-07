@@ -101,7 +101,8 @@ class DomrfSpiderSpider(scrapy.Spider):
 
                 domrf_item.add_value('region_id', 'test')
                 domrf_item.add_value('region_name', 'test')
-                domrf_item.add_value('name', 'test')
+
+                domrf_item.add_value('startDate', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
