@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+import requests
 
 class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
