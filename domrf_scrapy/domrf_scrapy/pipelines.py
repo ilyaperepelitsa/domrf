@@ -47,7 +47,7 @@ class DeveloperPipeline(object):
 
         if not developer_exists:
             adding_developer = Developer(**developer_entry)
-            session_test.add(adding_url)
+            session_test.add(adding_developer)
             session_test.commit()
 
         yield item
