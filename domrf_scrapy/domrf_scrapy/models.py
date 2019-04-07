@@ -62,7 +62,9 @@ class DeveloperData(Base_item):
     __tablename__ = "authors"
     id = Column(INTEGER, primary_key = True)
     developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
-    region_id = Column(INTEGER, ForeignKey("regions.developer_group_id"), nullable=False)
+    region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
+    source_spider = Column(VARCHAR(20), unique = True)
+    source_spider = Column(VARCHAR(20), unique = True)
 
     def __repr__(self):
         return "<Base_item(author_id='%s', author_name='%s')>"\
