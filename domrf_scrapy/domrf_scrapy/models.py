@@ -84,7 +84,8 @@ class DeveloperData(Base_item):
             self.region_id, self.startDate,
             self.endDate, self.total_living_floor_size,
             self.appt_num, self.object_count,
-            self.total_living_floor_size_pct, self.typed_volume_pct,)
+            self.total_living_floor_size_pct, self.typed_volume_pct,
+            self.rating)
 
 Base_item.metadata.create_all(engine_test)
 Session_test = sessionmaker(bind = engine_test)
