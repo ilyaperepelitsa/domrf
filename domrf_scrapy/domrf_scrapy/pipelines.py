@@ -75,9 +75,9 @@ class DataPipeline(object):
 
         data_entry = {"developer_group_id" : item["developer_group_id"],
                             "region_id" : item["region_id"],
-                            "startDate" : item["developer_group_address"],
-                            "endDate" : item["developer_group_name"],
-                            "total_living_floor_size" : item["developer_group_name"],
+                            "startDate" : item["startDate"],
+                            "endDate" : item["endDate"],
+                            "total_living_floor_size" : item["total_living_floor_size"],
                             "appt_num" : item["developer_group_name"],
                             "object_count" : item["developer_group_name"],
                             "total_living_floor_size_pct" : item["developer_group_name"],
