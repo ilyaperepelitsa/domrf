@@ -35,8 +35,8 @@ class DomrfSpiderSpider(scrapy.Spider):
     def parse_list(self, response):
         for developer in json.loads(response.body_as_unicode()):
             developer_details_request =  Request(
-                "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-                meta={'developer_main':developer}
+                "https://наш.дом.рф/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}",
+                meta={'developer_main': developer}
                 headers = self.headers,
                 callback=self.parse_list
             )
