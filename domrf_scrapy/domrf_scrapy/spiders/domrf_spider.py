@@ -71,5 +71,5 @@ class DomrfSpiderSpider(scrapy.Spider):
                     'developer_data': developer_data,
                     'developer_group_address' : developer_group_address}
             headers = self.headers,
-            callback=self.parse_developer_detailed
+            callback=self.parse_developer_report
         )
