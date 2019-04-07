@@ -30,7 +30,7 @@ class DomrfSpiderSpider(scrapy.Spider):
             headers = self.headers,
             callback=self.parse_list
         )
-        yield PR
+        return PR
 
     def parse_list(self, response):
         return {"pew" : json.loads(response.body_as_unicode())}
