@@ -80,7 +80,9 @@ class DeveloperData(Base_item):
                         appt_num='%s', object_count='%s'\
                         total_living_floor_size_pct='%s', typed_volume_pct='%s'\
                         rating='%s')>"\
-        %(self.author_id, self.author_name,
+        %(self.id, self.author_name,
+            self.author_id, self.author_name,
+            self.author_id, self.author_name,
             self.author_id, self.author_name,
             self.author_id, self.author_name,)
 
