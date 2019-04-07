@@ -2,7 +2,7 @@
 import scrapy
 import requests
 from scrapy.http import Request
-
+import json
 
 class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
@@ -28,4 +28,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield PR
 
     def parse_list(self, response):
-        return {"response.body}
+        return {"pew" : response.body}
