@@ -38,10 +38,10 @@ class DomrfSpiderSpider(scrapy.Spider):
                 "https://наш.дом.рф/аналитика/grapi/v1/developer_group_region?developerGroupId={developer_id}".format(**{"developer_id" : developer["developer_group_id"]}),
                 meta={'developer_main': developer}
                 headers = self.headers,
-                callback=self.parse_list
+                callback=self.parse_developer_detailed
             )
             yield developer_details_request
 
-        return {"pew" : json.loads(response.body_as_unicode())}
+        # return {"pew" : json.loads(response.body_as_unicode())}
 
     def parse_developer_detailed(self, response):
