@@ -48,9 +48,9 @@ class Developer(Base_item):
                             developer_group_address='%s')>"\
         %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
 
-class Developer(Base_item):
+class DeveloperData(Base_item):
     __tablename__ = "authors"
-    author_id = Column(INTEGER, primary_key = True)
+    developer_group_id = Column(INTEGER, primary_key = True)
     author_name = Column(VARCHAR(50), unique = True)
 
     def __repr__(self):
