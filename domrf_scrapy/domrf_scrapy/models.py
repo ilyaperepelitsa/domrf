@@ -10,6 +10,8 @@ from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
+from news.models import *
+
 # import keys
 # import pkg_resources
 # json_path = pkg_resources.resource_filename('credentials', 'passwords.json')
