@@ -8,6 +8,7 @@ from news.models import *
 from sqlalchemy.sql import select
 from sqlalchemy import and_
 from sqlalchemy.exc import OperationalError
+from sqlalchemy.sql import exists
 
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
