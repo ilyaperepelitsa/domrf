@@ -69,7 +69,7 @@ class DeveloperData(Base_item):
     total_living_floor_size = Column(INTEGER)
     appt_num = Column(INTEGER)
     object_count = Column(INTEGER)
-    total_living_floor_size_pct = Column(INTEGER)
+    total_living_floor_size_pct = Column(FLOAT)
     typed_volume_pct = Column(INTEGER)
     rating = Column(INTEGER)
 
