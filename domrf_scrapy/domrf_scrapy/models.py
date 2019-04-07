@@ -65,7 +65,14 @@ class DeveloperData(Base_item):
     region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
     startDate = Column(VARCHAR(20))
     endDate = Column(VARCHAR(20))
-    
+
+    total_living_floor_size = Field()
+    appt_num = Field()
+    object_count = Field()
+    total_living_floor_size_pct = Field()
+    typed_volume_pct = Field()
+    rating = Field()
+
 
     def __repr__(self):
         return "<Base_item(author_id='%s', author_name='%s')>"\
