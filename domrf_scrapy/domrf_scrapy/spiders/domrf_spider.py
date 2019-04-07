@@ -8,7 +8,11 @@ class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
     # allowed_domains = ['наш.дом.рф']
     start_urls = ['https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group']
-    
+    headers = {"Accept": "*/*",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Connection": "keep-alive",
+                "content-type": "application/json"}
     #
     # def parse(self, response):
     #
@@ -23,7 +27,7 @@ class DomrfSpiderSpider(scrapy.Spider):
     def parse(self, response):
         PR = Request(
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-            headers = ,
+            headers = self.headers,
 
             callback=self.parse_list
         )
