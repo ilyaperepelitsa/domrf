@@ -99,8 +99,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                     domrf_item.add_value('developer_group_address',
                             developer_group_address['developer_group_address'])
 
-                domrf_item.add_value('region_id', developer["developer_group_name"])
-                domrf_item.add_value('region_name', developer["developer_group_name"])
+                domrf_item.add_value('region_id', value["developer_group_name"])
+                domrf_item.add_value('region_name', value["developer_group_name"])
 
                 domrf_item.add_value('startDate', developer_report)
                 domrf_item.add_value('endDate', developer_report)
