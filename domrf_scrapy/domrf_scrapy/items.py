@@ -14,7 +14,7 @@ class FercItem(scrapy.Item):
     developer_group_address = Field()
     region_id = Field()
     region_name = Field()
-    developer_group_name = Field()
+    startDate = Field()
     developer_group_id = Field()
     developer_group_name = Field()
     developer_group_id = Field()
