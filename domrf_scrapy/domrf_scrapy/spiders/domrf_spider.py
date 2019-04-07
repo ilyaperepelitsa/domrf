@@ -110,7 +110,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('object_count', 'test')
                 domrf_item.add_value('total_living_floor_size_pct', 'test')
                 domrf_item.add_value('typed_volume_pct', 'test')
-                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('rating', 'test')
+                
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
                 item = article.load_item()
