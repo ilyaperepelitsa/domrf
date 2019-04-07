@@ -30,4 +30,4 @@ class DomrfScrapyPipeline(object):
         item["typed_volume_pct"] = float(item["typed_volume_pct"][0])
         item["rating"] = int(item["rating"][0])
 
-        return item
+        yield item
