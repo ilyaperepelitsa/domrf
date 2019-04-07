@@ -56,8 +56,8 @@ class DeveloperPipeline(object):
 class RegionPipeline(object):
     def process_item(self, item, spider):
 
-        region_entry = {"developer_group_id" : item["developer_group_id"],
-                            "developer_group_name" : item["developer_group_name"],
+        region_entry = {"region_id" : item["developer_group_id"],
+                            "region_name" : item["developer_group_name"],
                             "developer_group_address" : item["developer_group_address"]}
 
         developer_exists = session_test.query(exists().where(and_(
