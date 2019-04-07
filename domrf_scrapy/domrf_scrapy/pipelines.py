@@ -33,7 +33,7 @@ class DomrfScrapyPipeline(object):
         yield item
 
 
-class Developer(object):
+class DeveloperPipeline(object):
     def process_item(self, item, spider):
 
         item["developer_group_id"] = int(item["developer_group_id"][0])
