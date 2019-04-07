@@ -49,7 +49,7 @@ class Developer(Base_item):
         %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
 
 class Region(Base_item):
-    __tablename__ = "developers"
+    __tablename__ = "regions"
     region_id = Column(INTEGER, primary_key = True)
     region_name = Column(TEXT, nullable=False)
 
