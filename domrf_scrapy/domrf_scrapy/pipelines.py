@@ -83,8 +83,8 @@ class DataPipeline(object):
                     Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
 
         if not data_exists:
-            adding_data = DeveloperData(**developer_entry)
-            session_test.add(adding_developer)
+            adding_data = DeveloperData(**data_entry)
+            session_test.add(adding_data)
             session_test.commit()
 
         yield item
