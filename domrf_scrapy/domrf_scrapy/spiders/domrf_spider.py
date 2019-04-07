@@ -69,7 +69,7 @@ class DomrfSpiderSpider(scrapy.Spider):
             "https://наш.дом.рф/аналитика/grapi/v1/entityInfoDateRange?id={developer_id}&type=devGroup".format(**{"developer_id" : developer["developer_group_id"]}),
             meta={'developer': developer,
                     'developer_data': developer_data,
-                    ""}
+                    'developer_group_address' : developer_group_address}
             headers = self.headers,
             callback=self.parse_developer_detailed
         )
