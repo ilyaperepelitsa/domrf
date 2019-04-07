@@ -81,8 +81,8 @@ class DeveloperData(Base_item):
                         total_living_floor_size_pct='%s', typed_volume_pct='%s'\
                         rating='%s')>"\
         %(self.id, self.developer_group_id,
-            self.region_id, self.author_name,
-            self.author_id, self.author_name,
+            self.region_id, self.startDate,
+            self.endDate, self.author_name,
             self.author_id, self.author_name,
             self.author_id, self.author_name,)
 
