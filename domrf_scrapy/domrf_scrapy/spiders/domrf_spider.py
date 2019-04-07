@@ -112,8 +112,6 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('typed_volume_pct', 'test')
                 domrf_item.add_value('rating', 'test')
                 
-                domrf_item.add_value('name', 'test')
-                domrf_item.add_value('name', 'test')
                 item = article.load_item()
                 yield(item)
 
