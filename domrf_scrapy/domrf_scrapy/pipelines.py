@@ -80,8 +80,8 @@ class DataPipeline(object):
                             "total_living_floor_size" : item["total_living_floor_size"],
                             "appt_num" : item["appt_num"],
                             "object_count" : item["object_count"],
-                            "total_living_floor_size_pct" : item["developer_group_name"],
-                            "typed_volume_pct" : item["developer_group_name"],
+                            "total_living_floor_size_pct" : item["total_living_floor_size_pct"],
+                            "typed_volume_pct" : item["typed_volume_pct"],
                             "rating" : item["developer_group_name"]}
 
         data_exists = session_test.query(exists().where(and_(
