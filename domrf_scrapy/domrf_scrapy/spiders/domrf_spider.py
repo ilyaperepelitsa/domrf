@@ -85,28 +85,29 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_report = json.loads(response.body_as_unicode())["payload"]
 
         if len(developer_data) > 0:
-            for value in developer_data"
-        domrf_item = ItemLoader(item = DomRFItem(), response = response)
+            for value in developer_data:
 
-        # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
-        domrf_item.add_value('source', "glassdoor")
-        domrf_item.add_value('name', 'test')
+                domrf_item = ItemLoader(item = DomRFItem(), response = response)
 
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        domrf_item.add_value('name', 'test')
-        item = article.load_item()
-        yield(item)
+                # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
+                domrf_item.add_value('source', "glassdoor")
+                domrf_item.add_value('name', 'test')
+
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                item = article.load_item()
+                yield(item)
 
         return {#dict
                 "developer" : developer,
