@@ -40,7 +40,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 headers = self.headers,
                 callback=self.parse_list
             )
+            н
 
         return {"pew" : json.loads(response.body_as_unicode())}
 
-    def parse_developer_detai(self, response):
+    def parse_developer_detailed(self, response):
