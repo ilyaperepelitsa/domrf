@@ -77,8 +77,8 @@ class DataPipeline(object):
                             "region_id" : item["developer_group_name"],
                             "startDate" : item["developer_group_address"],
                             "endDate" : item["developer_group_name"],
-                            "region_id" : item["developer_group_name"],
-                            "region_id" : item["developer_group_name"],
+                            "total_living_floor_size" : item["developer_group_name"],
+                            "appt_num" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"]}
