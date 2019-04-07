@@ -52,9 +52,15 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'domrf_scrapy.middlewares.DomrfScrapyDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
+   # 'FERC.middlewares.MyCustomDownloaderMiddleware': 543,
+   # 'scrapy_splash.SplashCookiesMiddleware': 723,
+   # 'scrapy_splash.SplashMiddleware': 725,
+   'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810
+}
+
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
