@@ -99,12 +99,12 @@ class DomrfSpiderSpider(scrapy.Spider):
         domrf_item.add_xpath("job_apply_link", '//div[@class = "cell"]/a/@href')
         domrf_item.add_xpath("job_apply_text", '//div[@class = "cell"]/a//text()')
 
-        article.add_xpath("company_website", '//div[@class = "infoEntity"]//span[@class = "value website"]/a/@href')
-        article.add_xpath("company_size", '//div[@class]/*[contains(text(), "Size")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_type", '//div[@class]/*[contains(text(), "Type")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_revenue", '//div[@class]/*[contains(text(), "Revenue")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
-        article.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
+        domrf_item.add_xpath("company_website", '//div[@class = "infoEntity"]//span[@class = "value website"]/a/@href')
+        domrf_item.add_xpath("company_size", '//div[@class]/*[contains(text(), "Size")]/following-sibling::span[@class = "value"]/text()')
+        domrf_item.add_xpath("company_type", '//div[@class]/*[contains(text(), "Type")]/following-sibling::span[@class = "value"]/text()')
+        domrf_item.add_xpath("company_revenue", '//div[@class]/*[contains(text(), "Revenue")]/following-sibling::span[@class = "value"]/text()')
+        domrf_item.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
+        domrf_item.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
         article.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
         article.add_xpath("company_description", '//div[@id="EmpBasicInfo"]//div[@data-full]/@data-full')
 
