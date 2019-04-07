@@ -13,6 +13,9 @@ from sqlalchemy.sql import exists
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
 
+        item["developer_group_id"] = item["url"][0]
+        item["developer_group_name"] = item["url"][0]
+        item["developer_group_address"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
@@ -21,10 +24,7 @@ class DomrfScrapyPipeline(object):
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
-        item["url"] = item["url"][0]
-        item["url"] = item["url"][0]
-        item["url"] = item["url"][0]
-        
+
 
         developer_group_id = Field()
         developer_group_name = Field()
