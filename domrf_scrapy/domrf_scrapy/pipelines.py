@@ -45,8 +45,7 @@ class DeveloperPipeline(object):
                     Developer.developer_group_name == developer_entry['developer_group_name'],
                     Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
 
-        filter(and_(User.name == 'leela', User.fullname == 'leela dharan'))
-        if not url_exists:
+        if not developer_exists:
             adding_url = Url_entry(**url_entry)
             session_test.add(adding_url)
             session_test.commit()
