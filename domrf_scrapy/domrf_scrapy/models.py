@@ -11,8 +11,8 @@ from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
 # import keys
-import pkg_resources
-json_path = pkg_resources.resource_filename('credentials', 'passwords.json')
+# import pkg_resources
+# json_path = pkg_resources.resource_filename('credentials', 'passwords.json')
 
 # root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # json_path = os.path.join(root_path, "credentials/passwords.json")
