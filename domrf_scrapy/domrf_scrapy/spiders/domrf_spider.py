@@ -83,7 +83,7 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_data = response.meta['developer_data']
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
-        
+
         if len(developer_data) > 0:
             for value in developer_data:
 
@@ -99,7 +99,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                     domrf_item.add_value('developer_group_address',
                             developer_group_address['developer_group_address'])
 
-                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('region_id', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
