@@ -23,7 +23,7 @@ class DomrfSpiderSpider(scrapy.Spider):
     def parse(self, response):
         PR = Request(
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-            headers = {"Accept-Charset": utf-8}
+            headers = {"Accept": "utf-8"}
             callback=self.parse_list
         )
         yield PR
