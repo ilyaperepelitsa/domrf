@@ -55,7 +55,7 @@ class Region(Base_item):
 
     def __repr__(self):
         return "<Base_item(region_id='%s', region_name='%s')>"\
-        %(self.region_id, self.developer_group_name, self.developer_group_address)
+        %(self.region_id, self.region_name)
 
 
 class DeveloperData(Base_item):
