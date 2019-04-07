@@ -103,7 +103,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('region_name', value)
 
                 domrf_item.add_value('startDate', developer_report)
-                domrf_item.add_value('endDate', 'test')
+                domrf_item.add_value('endDate', developer_report)
 
                 domrf_item.add_value('total_living_floor_size', value)
                 domrf_item.add_value('appt_num', value)
