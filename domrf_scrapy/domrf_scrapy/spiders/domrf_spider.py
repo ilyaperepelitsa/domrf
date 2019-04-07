@@ -2,6 +2,7 @@
 import scrapy
 import requests
 from scrapy.http import Request
+from scrapy.loader import ItemLoader
 import json
 
 class DomrfSpiderSpider(scrapy.Spider):
