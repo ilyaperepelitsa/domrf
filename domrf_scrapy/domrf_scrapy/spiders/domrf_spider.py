@@ -33,6 +33,6 @@ class DomrfSpiderSpider(scrapy.Spider):
         return PR
 
     def parse_list(self, response):
-        for developer 
+        for developer in json.loads(response.body_as_unicode()):
 
         return {"pew" : json.loads(response.body_as_unicode())}
