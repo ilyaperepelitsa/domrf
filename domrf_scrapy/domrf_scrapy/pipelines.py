@@ -14,10 +14,10 @@ class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
 
         item["developer_group_id"] = item["developer_group_id"][0]
-        item["developer_group_name"] = item["url"][0]
-        item["developer_group_address"] = item["url"][0]
+        item["developer_group_name"] = item["developer_group_name"][0]
+        item["developer_group_address"] = item["developer_group_address"][0]
 
-        item["region_id"] = item["url"][0]
+        item["region_id"] = item["region_id"][0]
         item["region_name"] = item["url"][0]
 
         item["startDate"] = item["url"][0]
