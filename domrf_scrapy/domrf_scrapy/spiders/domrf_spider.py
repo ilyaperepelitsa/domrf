@@ -87,7 +87,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                 #list
                 # "developer_data" : type(developer_data),
                 #list
-                "developer_group_address" : type(developer_group_address),
+                "developer_group_address" : developer_group_address),
                 #dict
                 # "developer_report" : type(developer_report)
                 }
