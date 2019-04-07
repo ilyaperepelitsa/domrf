@@ -25,7 +25,7 @@ from sqlalchemy.sql import exists
 # dataslap_postgres = keys.get_dataslap_postgres()
 
 
-engine_test = create_engine('postgres://vtbuser:qwerty123/localhost:5432')
+engine_test = create_engine('postgres://vtbuser:qwerty123@localhost:5432')
 Base_item = declarative_base()
 
 # class Url_entry(Base_item):
