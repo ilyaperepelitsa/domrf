@@ -74,8 +74,8 @@ class DeveloperData(Base_item):
     rating = Column(INTEGER)
 
     def __repr__(self):
-        return "<Base_item(id='%s', author_name='%s',\
-                        author_id='%s', author_name='%s'\
+        return "<Base_item(id='%s', developer_group_id='%s',\
+                        region_id='%s', author_name='%s'\
                         author_id='%s', author_name='%s'\
                         author_id='%s', author_name='%s'\
                         author_id='%s', author_name='%s'\
