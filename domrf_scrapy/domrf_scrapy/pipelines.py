@@ -65,7 +65,7 @@ class RegionPipeline(object):
 
         if not region_exists:
             adding_region = Region(**region_entry)
-            session_test.add(adding_developer)
+            session_test.add(adding_region)
             session_test.commit()
 
         yield item
@@ -73,5 +73,18 @@ class RegionPipeline(object):
 class DataPipeline(object):
     def process_item(self, item, spider):
 
+developer_entry = {"developer_group_id" : item["developer_group_id"],
+                    "developer_group_name" : item["developer_group_name"],
+                    "developer_group_address" : item["developer_group_address"]}
 
-        yield item
+developer_exists = session_test.query(exists().where(and_(
+            Developer.developer_group_id == developer_entry['developer_group_id'],
+            Developer.developer_group_name == developer_entry['developer_group_name'],
+            Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
+
+if not developer_exists:
+    adding_developer = Developer(**developer_entry)
+    session_test.add(adding_developer)
+    session_test.commit()
+
+yield item
