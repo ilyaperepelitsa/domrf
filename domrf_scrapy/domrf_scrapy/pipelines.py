@@ -25,8 +25,8 @@ class DomrfScrapyPipeline(object):
 
         item["total_living_floor_size"] = item["url"][0]
         item["appt_num"] = item["url"][0]
-        item["url"] = item["url"][0]
-        item["url"] = item["url"][0]
+        item["object_count"] = item["url"][0]
+        item["total_living_floor_size_pct"] = item["url"][0]
 
 
         developer_group_id = Field()
