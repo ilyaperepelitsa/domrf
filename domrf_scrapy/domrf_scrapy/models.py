@@ -37,8 +37,8 @@ Base_item = declarative_base()
 #         return "<Base_item(url_id='%s', url='%s')>"\
 #         %(self.url_id, self.url)
 
-class Article_entry(Base_item):
-    __tablename__ = "articles"
+class Developer(Base_item):
+    __tablename__ = "developers"
     id = Column(INTEGER, primary_key = True)
     url_id = Column(INTEGER, ForeignKey("urls.url_id"), nullable=False)
     article_title = Column(TEXT)
