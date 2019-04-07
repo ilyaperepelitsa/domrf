@@ -91,7 +91,7 @@ class DomrfSpiderSpider(scrapy.Spider):
 
                 # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
                 domrf_item.add_value('developer_group_id', developer["developer_group_id"])
-                domrf_item.add_value('developer_group_name', developer["developer_group_id"])
+                domrf_item.add_value('developer_group_name', developer["developer_group_name"])
 
                 if type(developer_group_address) is list:
                     domrf_item.add_value('developer_group_address', '')
@@ -99,8 +99,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                     domrf_item.add_value('developer_group_address',
                             developer_group_address['developer_group_address'])
 
-                domrf_item.add_value('region_id', value)
-                domrf_item.add_value('region_name', value)
+                domrf_item.add_value('region_id', developer["developer_group_name"])
+                domrf_item.add_value('region_name', developer["developer_group_name"])
 
                 domrf_item.add_value('startDate', developer_report)
                 domrf_item.add_value('endDate', developer_report)
