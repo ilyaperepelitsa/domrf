@@ -42,8 +42,8 @@ class DeveloperPipeline(object):
 
         developer_exists = session_test.query(exists().where(and_(
                     Developer.name == developer_entry['developer_group_id'],
-                    Developer.fullname == developer_entry['leela'],
-                    Developer.fullname == developer_entry['leela']))).scalar()
+                    Developer.fullname == developer_entry['developer_group_name'],
+                    Developer.fullname == developer_entry['developer_group_address']))).scalar()
 
         filter(and_(User.name == 'leela', User.fullname == 'leela dharan'))
         if not url_exists:
