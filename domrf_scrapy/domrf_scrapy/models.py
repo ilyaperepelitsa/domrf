@@ -51,7 +51,7 @@ class Developer(Base_item):
 class DeveloperData(Base_item):
     __tablename__ = "authors"
     id = Column(INTEGER, primary_key = True)
-    developer_group_id = Column(INTEGER, ForeignKey("developers.url_id"), nullable=False)
+    developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
     author_name = Column(VARCHAR(50), unique = True)
 
     def __repr__(self):
