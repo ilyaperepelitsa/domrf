@@ -45,3 +45,9 @@ class RegionPipeline(object):
 
 
         yield item
+
+class Data(object):
+    def process_item(self, item, spider):
+
+
+        yield item
