@@ -63,7 +63,7 @@ class DeveloperData(Base_item):
     id = Column(INTEGER, primary_key = True)
     developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
     region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
-    source_spider = Column(VARCHAR(20), unique = True)
+    startDate = Column(VARCHAR(20), unique = True)
     source_spider = Column(VARCHAR(20), unique = True)
 
     def __repr__(self):
