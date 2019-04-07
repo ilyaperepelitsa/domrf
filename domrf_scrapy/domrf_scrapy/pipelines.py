@@ -60,8 +60,8 @@ class RegionPipeline(object):
                             "region_name" : item["region_name"]}
 
         region_exists = session_test.query(exists().where(and_(
-                    Region.developer_group_id == developer_entry['region_id'],
-                    Region.developer_group_name == developer_entry['developer_group_name']))).scalar()
+                    Region.developer_group_id == region_entry['region_id'],
+                    Region.developer_group_name == region_entry['region_name']))).scalar()
 
         if not developer_exists:
             adding_developer = Developer(**developer_entry)
