@@ -83,41 +83,41 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_data = response.meta['developer_data']
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
-        #
-        # if len(developer_data) > 0:
-        #     for value in developer_data:
-        #
-        #         domrf_item = ItemLoader(item = DomRFItem(), response = response)
-        #
-        #         # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
-        #         domrf_item.add_value('developer_group_id', "glassdoor")
-        #         domrf_item.add_value('developer_group_name', 'test')
-        #
-        #         if type(developer_group_address) is list:
-        #             domrf_item.add_value('developer_group_address', '')
-        #         else:
-        #             domrf_item.add_value('developer_group_address',
-        #                     developer_group_address['developer_group_address'])
-        #
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         domrf_item.add_value('name', 'test')
-        #         item = article.load_item()
-        #         yield(item)
+        
+        if len(developer_data) > 0:
+            for value in developer_data:
+
+                domrf_item = ItemLoader(item = DomRFItem(), response = response)
+
+                # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
+                domrf_item.add_value('developer_group_id', "glassdoor")
+                domrf_item.add_value('developer_group_name', 'test')
+
+                if type(developer_group_address) is list:
+                    domrf_item.add_value('developer_group_address', '')
+                else:
+                    domrf_item.add_value('developer_group_address',
+                            developer_group_address['developer_group_address'])
+
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                domrf_item.add_value('name', 'test')
+                item = article.load_item()
+                yield(item)
 
         return {#dict
-                "developer" : developer,
+                # "developer" : developer,
                 #list
-                # "developer_data" : developer_data,
+                "developer_data" : developer_data,
                 #list
                 # "developer_group_address" : developer_group_address,
                 #dict
