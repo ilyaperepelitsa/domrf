@@ -23,7 +23,7 @@ class DomrfScrapyPipeline(object):
         item["startDate"] = item["startDate"][0]
         item["endDate"] = item["endDate"][0]
 
-        item["total_living_floor_size"] = item["total_living_floor_size"][0]
+        item["total_living_floor_size"] = int(item["total_living_floor_size"][0]
         item["appt_num"] = item["appt_num"][0]
         item["object_count"] = item["object_count"][0]
         item["total_living_floor_size_pct"] = item["total_living_floor_size_pct"][0]
