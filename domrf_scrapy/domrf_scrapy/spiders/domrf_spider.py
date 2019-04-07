@@ -73,3 +73,9 @@ class DomrfSpiderSpider(scrapy.Spider):
             headers = self.headers,
             callback=self.parse_developer_report
         )
+
+    def parse_alt_details(self, response):
+
+        developer = response.meta['developer']
+        developer_data = response.meta['developer_data']
+        developer_group_address = json.loads(response.body_as_unicode())["developer_group_address"]
