@@ -88,7 +88,7 @@ class DomrfSpiderSpider(scrapy.Spider):
 
         # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
         domrf_item.add_value('source', "glassdoor")
-        domrf_item.add_value('url', response.url)
+        domrf_item.add_value('name', 'test')
 
         domrf_item.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
         domrf_item.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
@@ -106,7 +106,7 @@ class DomrfSpiderSpider(scrapy.Spider):
         domrf_item.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
         domrf_item.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
         domrf_item.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
-        
+
         item = article.load_item()
         yield(item)
 
