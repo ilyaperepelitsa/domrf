@@ -84,6 +84,37 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
 
+        article = ItemLoader(item = JobItem(), response = response)
+
+        # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
+        article.add_value('source', "glassdoor")
+        article.add_value('url', response.url)
+
+        article.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
+        article.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
+        article.add_xpath("job_company", '//meta[@name="description"]/@content')
+        article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]//*[not(name()="ul") and not(name()="ol") and not(name()="li")]/text()')
+        article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]/text()')
+        article.add_xpath("job_lists", '//div[contains(@class, "jobDescriptionContent")]//li/text()')
+        article.add_xpath("job_apply_link", '//div[@class = "cell"]/a/@href')
+        article.add_xpath("job_apply_text", '//div[@class = "cell"]/a//text()')
+
+        article.add_xpath("company_website", '//div[@class = "infoEntity"]//span[@class = "value website"]/a/@href')
+        article.add_xpath("company_size", '//div[@class]/*[contains(text(), "Size")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_type", '//div[@class]/*[contains(text(), "Type")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_revenue", '//div[@class]/*[contains(text(), "Revenue")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
+        article.add_xpath("company_description", '//div[@id="EmpBasicInfo"]//div[@data-full]/@data-full')
+
+        article.add_xpath("rating_rating", '//div[@class="empStatsBody"]//div[@class="ratingNum"]/text()')
+        article.add_xpath("rating_recommend", '//div[@id="EmpStats_Recommend"]/@data-percentage')
+        article.add_xpath("rating_approve", '//div[@id="EmpStats_Approve"]/@data-percentage')
+
+        item = article.load_item()
+        yield(item)
+
         return {#dict
                 "developer" : developer,
                 #list
