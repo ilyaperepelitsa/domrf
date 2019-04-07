@@ -108,8 +108,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('total_living_floor_size', value["developer_group_name"])
                 domrf_item.add_value('appt_num', value["developer_group_name"])
                 domrf_item.add_value('object_count', value["developer_group_name"])
-                domrf_item.add_value('total_living_floor_size_pct', value)
-                domrf_item.add_value('typed_volume_pct', value)
+                domrf_item.add_value('total_living_floor_size_pct', value["developer_group_name"])
+                domrf_item.add_value('typed_volume_pct', value["developer_group_name"])
                 domrf_item.add_value('rating', value)
 
                 item = domrf_item.load_item()
