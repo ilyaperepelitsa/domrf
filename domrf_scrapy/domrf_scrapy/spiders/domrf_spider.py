@@ -19,5 +19,8 @@ class DomrfSpiderSpider(scrapy.Spider):
     #     yield PR
 
     def parse(self, response):
-        proxy_data = get_data_from_response(PR)
-        yield {"data" : proxy_data}
+        PR = Request(
+            "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
+            callback=self.parse_дшые
+        )
+        return PR
