@@ -90,8 +90,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item = ItemLoader(item = DomRFItem(), response = response)
 
                 # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
-                domrf_item.add_value('developer_group_id', "developer)
-                domrf_item.add_value('developer_group_name', 'test')
+                domrf_item.add_value('developer_group_id', developer)
+                domrf_item.add_value('developer_group_name', developer)
 
                 if type(developer_group_address) is list:
                     domrf_item.add_value('developer_group_address', '')
