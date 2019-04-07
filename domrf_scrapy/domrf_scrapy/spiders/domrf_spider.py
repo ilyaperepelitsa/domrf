@@ -59,4 +59,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         yield alt_details_request
 
 
-    def alt_details_request(self, response):
+    def alt_details(self, response):
