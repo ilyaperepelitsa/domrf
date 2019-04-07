@@ -51,19 +51,35 @@ for developer in request_developers:
     ALT_DEV_INFO_ENDPOINT = ALT_DEV_INFO_ENDPOINT.format(**{"developer_id" : developer["developer_group_id"]})
 
 
-
-    report_data = requests.get(url= REPORT_ENDPOINT, headers=headers)
-    report_data = report_data.json()["payload"]
+    try:
+        report_data = requests.get(url= REPORT_ENDPOINT, headers=headers)
+        report_data = report_data.json()["payload"]
+    except:
+        time.sleep((random.random() * 2) + 5)
+        report_data = requests.get(url= REPORT_ENDPOINT, headers=headers)
+        report_data = report_data.json()["payload"]
     # report_data = {k: v.encode('utf-8','ignore') for k,v in report_data.items()}
     # developer = {k: v.encode('utf-8','ignore') for k,v in developer.items()}
+    try:
+        developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
+        developer_data = developer_bod.json()
+    except:
+        time.sleep((random.random() * 2) + 5)
+        developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
+        developer_data = developer_bod.json()
 
-    developer_bod = requests.get(url=DETAILED_DEVELOPER_ENDPOINT, headers=headers)
-    developer_data = developer_bod.json()
     # developer_data = {k: v.encode('utf-8','ignore') for k,v in developer_data.items()}
 
     # Cast developer ids only (sql prepared)
-    ald_dev_info = requests.get(url=ALT_DEV_INFO_ENDPOINT, headers=headers)
-    ald_dev_info_data = ald_dev_info.json()
+    try:
+        ald_dev_info = requests.get(url=ALT_DEV_INFO_ENDPOINT, headers=headers)
+        ald_dev_info_data = ald_dev_info.json()
+    except:
+        time.sleep((random.random() * 2) + 5)
+        ald_dev_info = requests.get(url=ALT_DEV_INFO_ENDPOINT, headers=headers)
+        ald_dev_info_data = ald_dev_info.json()
+
+
 
     developer_data = [dict(dev_data, **{k: v for k, v in ald_dev_info_data.items() if
                 k in ["developer_group_id",
@@ -132,6 +148,13 @@ for developer in request_developers:
             developer_empty.to_csv('data_missing.csv', mode='a', header=True, index = False)
 
 
+ald_dev_info.json()
+developer
+{'developer_group_name': 'Застройщик-ДВ', 'developer_group_id': '5904592001'}
+
+ald_dev_info = requests.get(url=ALT_DEV_INFO_ENDPOINT, headers=headers)
+ald_dev_info_data = ald_dev_info.json()
+ald_dev_info_data
 
 pd.Series(developer).loc[['developer_group_id', 'developer_group_name']]
 
