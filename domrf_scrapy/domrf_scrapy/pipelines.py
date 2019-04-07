@@ -76,7 +76,7 @@ class DataPipeline(object):
         data_entry = {"developer_group_id" : item["developer_group_id"],
                             "region_id" : item["developer_group_name"],
                             "startDate" : item["developer_group_address"],
-                            "region_id" : item["developer_group_name"],
+                            "endDate" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"],
                             "region_id" : item["developer_group_name"],
