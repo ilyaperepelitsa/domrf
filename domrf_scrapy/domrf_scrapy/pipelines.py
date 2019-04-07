@@ -81,7 +81,7 @@ class DataPipeline(object):
                             "appt_num" : item["developer_group_name"],
                             "object_count" : item["developer_group_name"],
                             "total_living_floor_size_pct" : item["developer_group_name"],
-                            "region_id" : item["developer_group_name"]}
+                            "typed_volume_pct" : item["developer_group_name"],}
 
         data_exists = session_test.query(exists().where(and_(
                     Developer.developer_group_id == developer_entry['developer_group_id'],
