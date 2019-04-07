@@ -45,3 +45,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         # return {"pew" : json.loads(response.body_as_unicode())}
 
     def parse_developer_detailed(self, response):
+        newrequest = response.meta['newrequest']
