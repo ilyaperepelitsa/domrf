@@ -41,7 +41,7 @@ class Developer(Base_item):
     __tablename__ = "developers"
     developer_group_id = Column(INTEGER, primary_key = True)
     developer_group_name = Column(TEXT, nullable=False)
-    developer_group_address = Column(TEXT, )
+    developer_group_address = Column(TEXT, nullable=True)
     article_text = Column(TEXT)
     author_id = Column(ARRAY(INTEGER, dimensions=1), nullable=False)
     date_published = Column(TIMESTAMP)
