@@ -46,10 +46,9 @@ class Developer(Base_item):
     def __repr__(self):
         return "<Base_item(developer_group_id='%s', developer_group_name='%s',\
                             developer_group_address='%s')>"\
-        %(self.developer_group_id, self.developer_group_name, self.developer_group_address,
-            self.date_published, self.date_scraped, self.source_id)
+        %(self.developer_group_id, self.developer_group_name, self.developer_group_address)
 
-class Author_entry(Base_item):
+class Developer(Base_item):
     __tablename__ = "authors"
     author_id = Column(INTEGER, primary_key = True)
     author_name = Column(VARCHAR(50), unique = True)
