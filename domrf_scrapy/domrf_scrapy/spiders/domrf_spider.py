@@ -96,7 +96,8 @@ class DomrfSpiderSpider(scrapy.Spider):
                 if type(developer_group_address) is list:
                     domrf_item.add_value('developer_group_address', '')
                 else:
-                    domrf_item.add_value('developer_group_address', developer_group_address[''])
+                    domrf_item.add_value('developer_group_address',
+                            developer_group_address['developer_group_address'])
 
                 domrf_item.add_value('name', 'test')
                 domrf_item.add_value('name', 'test')
