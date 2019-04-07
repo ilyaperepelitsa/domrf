@@ -36,7 +36,7 @@ class DomrfSpiderSpider(scrapy.Spider):
         for developer in json.loads(response.body_as_unicode()):
             developer_details_request =  Request(
                 "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-                meta={'newrequest':
+                meta={'developer':""}
                 headers = self.headers,
                 callback=self.parse_list
             )
