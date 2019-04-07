@@ -40,7 +40,7 @@ Base_item = declarative_base()
 class Developer(Base_item):
     __tablename__ = "developers"
     developer_group_id = Column(INTEGER, primary_key = True)
-    developer_group_name = Column(INTEGER, ForeignKey("urls.url_id"), nullable=False)
+    developer_group_name = Column(TEXT, nullable=False)
     developer_group_address = Column(TEXT)
     article_text = Column(TEXT)
     author_id = Column(ARRAY(INTEGER, dimensions=1), nullable=False)
