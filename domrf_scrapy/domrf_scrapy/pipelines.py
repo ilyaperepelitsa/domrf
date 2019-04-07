@@ -17,7 +17,7 @@ class DomrfScrapyPipeline(object):
         item["developer_group_name"] = item["developer_group_name"][0]
         item["developer_group_address"] = item["developer_group_address"][0]
 
-        item["region_id"] = item["region_id"][0]
+        item["region_id"] = int(item["region_id"][0])
         item["region_name"] = item["region_name"][0]
 
         item["startDate"] = item["startDate"][0]
