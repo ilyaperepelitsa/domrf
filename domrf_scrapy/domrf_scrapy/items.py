@@ -8,7 +8,7 @@
 import scrapy
 from scrapy.item import Item, Field
 
-class FercItem(scrapy.Item):
+class Item(scrapy.Item):
     developer_group_id = Field()
     developer_group_name = Field()
     developer_group_address = Field()
