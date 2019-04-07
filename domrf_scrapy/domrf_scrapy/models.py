@@ -39,7 +39,7 @@ Base_item = declarative_base()
 
 class Article_entry(Base_item):
     __tablename__ = "articles"
-    article_id = Column(INTEGER, primary_key = True)
+    id = Column(INTEGER, primary_key = True)
     url_id = Column(INTEGER, ForeignKey("urls.url_id"), nullable=False)
     article_title = Column(TEXT)
     article_text = Column(TEXT)
