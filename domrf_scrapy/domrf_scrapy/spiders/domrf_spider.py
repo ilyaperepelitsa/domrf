@@ -25,7 +25,13 @@ class DomrfSpiderSpider(scrapy.Spider):
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
             headers = {"Accept": "json"},
 
-            
+            "Accept": */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+content-type: application/json
+
+
             callback=self.parse_list
         )
         yield PR
