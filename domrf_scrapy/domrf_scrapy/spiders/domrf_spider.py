@@ -4,7 +4,7 @@ import requests
 from scrapy.http import Request
 from scrapy.loader import ItemLoader
 import json
-from domrf_scrapu.items import FercItem
+from domrf_scrapy.items import DomRFItem
 
 class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
