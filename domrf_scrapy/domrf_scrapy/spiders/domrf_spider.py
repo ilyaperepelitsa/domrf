@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import requests
-from scrapy.http import FormRequest
+from scrapy.http import Request
 
 
 class DomrfSpiderSpider(scrapy.Spider):
