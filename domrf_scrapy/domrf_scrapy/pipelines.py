@@ -75,7 +75,10 @@ class DataPipeline(object):
 
         data_entry = {"developer_group_id" : item["developer_group_id"],
                             "region_id" : item["developer_group_name"],
-                            "startDate" : item["developer_group_address"]}
+                            "startDate" : item["developer_group_address"],
+                            "region_id" : item["developer_group_name"],
+                            "region_id" : item["developer_group_name"],
+                            }
 
         data_exists = session_test.query(exists().where(and_(
                     Developer.developer_group_id == developer_entry['developer_group_id'],
