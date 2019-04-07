@@ -77,8 +77,8 @@ class DeveloperData(Base_item):
         return "<Base_item(id='%s', developer_group_id='%s',\
                         region_id='%s', startDate='%s'\
                         endDate='%s', total_living_floor_size='%s'\
-                        appt_num='%s', author_name='%s'\
-                        author_id='%s', author_name='%s'\
+                        appt_num='%s', object_count='%s'\
+                        total_living_floor_size_pct='%s', author_name='%s'\
                         author_id='%s', author_name='%s')>"\
         %(self.author_id, self.author_name)
 
