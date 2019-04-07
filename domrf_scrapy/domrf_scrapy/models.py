@@ -71,15 +71,7 @@ class DeveloperData(Base_item):
     object_count = Column(INTEGER)
     total_living_floor_size_pct = Column(INTEGER)
     typed_volume_pct = Column(INTEGER)
-    rating = Column(INTEGER, primary_key = True)
-
-    total_living_floor_size = Field()
-    appt_num = Field()
-    object_count = Field()
-    total_living_floor_size_pct = Field()
-    typed_volume_pct = Field()
-    rating = Field()
-
+    rating = Column(INTEGER)
 
     def __repr__(self):
         return "<Base_item(author_id='%s', author_name='%s')>"\
