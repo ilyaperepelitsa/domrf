@@ -77,16 +77,6 @@ class DeveloperData(Base_item):
         return "<Base_item(author_id='%s', author_name='%s')>"\
         %(self.author_id, self.author_name)
 
-class Source_entry(Base_item):
-    __tablename__ = "sources"
-    source_id = Column(INTEGER, primary_key = True)
-    source_spider = Column(VARCHAR(20), unique = True)
-    source_domain = Column(VARCHAR(50), unique = True)
-
-    def __repr__(self):
-        return "<Base_item(source_id='%s', source_spider='%s', source_domain='%s')>"\
-        %(self.source_id, self.source_spider, self.source_domain)
-
 Base_item.metadata.create_all(engine_test)
 Session_test = sessionmaker(bind = engine_test)
 session_test = Session_test()
