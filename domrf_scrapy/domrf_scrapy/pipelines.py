@@ -13,7 +13,7 @@ from sqlalchemy.sql import exists
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
 
-        item["developer_group_id"] = item["url"][0]
+        item["developer_group_id"] = item["developer_group_id"][0]
         item["developer_group_name"] = item["url"][0]
         item["developer_group_address"] = item["url"][0]
 
@@ -29,20 +29,5 @@ class DomrfScrapyPipeline(object):
         item["total_living_floor_size_pct"] = item["url"][0]
         item["typed_volume_pct"] = item["url"][0]
         item["rating"] = item["url"][0]
-
-
-        developer_group_id = Field()
-        developer_group_name = Field()
-        developer_group_address = Field()
-        region_id = Field()
-        region_name = Field()
-        startDate = Field()
-        endDate = Field()
-        total_living_floor_size = Field()
-        appt_num = Field()
-        object_count = Field()
-        total_living_floor_size_pct = Field()
-        typed_volume_pct = Field()
-        rating = Field()
 
         return item
