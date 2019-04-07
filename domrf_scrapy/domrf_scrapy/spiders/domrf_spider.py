@@ -54,7 +54,7 @@ class DomrfSpiderSpider(scrapy.Spider):
             meta={'developer': developer,
                     'developer_data': developer_data}
             headers = self.headers,
-            callback=self.parse_developer_detailed
+            callback=self.parse_alt_details
         )
         yield alt_details_request
 
