@@ -28,14 +28,14 @@ from sqlalchemy.sql import exists
 engine_test = create_engine('postgres://localhost:5432')
 Base_item = declarative_base()
 
-class Url_entry(Base_item):
-    __tablename__ = "urls"
-    url_id = Column(INTEGER, primary_key = True)
-    url = Column(TEXT, unique = True)
-
-    def __repr__(self):
-        return "<Base_item(url_id='%s', url='%s')>"\
-        %(self.url_id, self.url)
+# class Url_entry(Base_item):
+#     __tablename__ = "urls"
+#     url_id = Column(INTEGER, primary_key = True)
+#     url = Column(TEXT, unique = True)
+#
+#     def __repr__(self):
+#         return "<Base_item(url_id='%s', url='%s')>"\
+#         %(self.url_id, self.url)
 
 class Article_entry(Base_item):
     __tablename__ = "articles"
