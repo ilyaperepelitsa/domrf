@@ -37,8 +37,8 @@ class DeveloperPipeline(object):
     def process_item(self, item, spider):
 
         developer_entry = {"developer_group_id" : item["developer_group_id"],
-                            "developer_group_name" : item["url"],
-                            "url" : item["url"]}
+                            "developer_group_name" : item["developer_group_name"],
+                            "developer_group_address" : item["developer_group_address"]}
 
         url_exists = session_test.query(exists().where(Url_entry.url==item["url"])).scalar()
         if not url_exists:
