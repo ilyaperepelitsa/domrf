@@ -17,6 +17,13 @@ class DomrfScrapyPipeline(object):
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
         
 
         developer_group_id = Field()
