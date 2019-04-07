@@ -17,6 +17,6 @@ class DomrfSpiderSpider(scrapy.Spider):
         )
         yield PR
 
-    def parse(self, response):
+    def parse_PR(self, response):
         proxy_data = get_data_from_response(PR)
         yield {"data" : proxy_data}
