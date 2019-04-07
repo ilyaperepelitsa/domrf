@@ -85,10 +85,10 @@ class DataPipeline(object):
                             "rating" : item["rating"]}
 
         data_exists = session_test.query(exists().where(and_(
-                    DeveloperData.developer_group_id == developer_entry['developer_group_id'],
-                    DeveloperData.region_id == developer_entry['region_id'],
-                    DeveloperData.startDate == developer_entry['developer_group_address'],
-                    DeveloperData.endDate == developer_entry['developer_group_id']
+                    DeveloperData.developer_group_id == data_entry['developer_group_id'],
+                    DeveloperData.region_id == data_entry['region_id'],
+                    DeveloperData.startDate == developer_entry['startDate'],
+                    DeveloperData.endDate == developer_entry['endDate']
                     ))).scalar()
 
         if not data_exists:
