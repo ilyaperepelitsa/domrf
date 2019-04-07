@@ -25,11 +25,7 @@ from sqlalchemy.sql import exists
 # dataslap_postgres = keys.get_dataslap_postgres()
 
 
-engine_test = create_engine('postgres://%(username)s:%(password)s@%(host)s:%(port)s/play' %\
-                                        {"username" : dataslap_postgres["username"],
-                                        "password" : dataslap_postgres["password"],
-                                        "host" : dataslap_postgres["host"],
-                                        "port" : dataslap_postgres["port"]})
+engine_test = create_engine('postgres://)
 Base_item = declarative_base()
 
 class Url_entry(Base_item):
