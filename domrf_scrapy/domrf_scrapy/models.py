@@ -71,8 +71,8 @@ class DeveloperData(Base_item):
     object_count = Column(INTEGER, primary_key = True)
     total_living_floor_size_pct = Column(INTEGER, primary_key = True)
     typed_volume_pct = Column(INTEGER, primary_key = True)
-    typed_volume_pct = Column(INTEGER, primary_key = True)
-    
+    rating = Column(INTEGER, primary_key = True)
+
     total_living_floor_size = Field()
     appt_num = Field()
     object_count = Field()
