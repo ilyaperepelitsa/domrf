@@ -75,8 +75,8 @@ class DeveloperData(Base_item):
 
     def __repr__(self):
         return "<Base_item(id='%s', developer_group_id='%s',\
-                        region_id='%s', author_name='%s'\
-                        author_id='%s', author_name='%s'\
+                        region_id='%s', startDate='%s'\
+                        endDate='%s', author_name='%s'\
                         author_id='%s', author_name='%s'\
                         author_id='%s', author_name='%s'\
                         author_id='%s', author_name='%s')>"\
