@@ -17,11 +17,11 @@ from sqlalchemy.sql import exists
 # root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # json_path = os.path.join(root_path, "credentials/passwords.json")
 
-data = json.load(open(json_path))
+# data = json.load(open(json_path))
 
 # json.loads(s)
 
-dataslap_postgres = data["aws"]["personal"]["dataslap"]["postgres"]["free_20gb"]["dataslap_user"]
+# dataslap_postgres = data["aws"]["personal"]["dataslap"]["postgres"]["free_20gb"]["dataslap_user"]
 # dataslap_postgres = keys.get_dataslap_postgres()
 
 
