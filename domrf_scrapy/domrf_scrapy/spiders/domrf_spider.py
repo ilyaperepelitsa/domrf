@@ -9,4 +9,12 @@ class DomrfSpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         # yield {"pew" : dir(response)}
-        yield {"pew" : response.body}
+        def parse(self, response):
+    for i in range(1,3,1):
+        PR = Request(
+            'http://myproxyapi.com',
+            headers=self.headers,
+            meta={'newrequest': Request('htp//sitetoscrape.com',  headers=self.headers),},
+            callback=self.parse_PR
+        )
+        yield PR
