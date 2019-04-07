@@ -44,7 +44,7 @@ class Developer(Base_item):
     developer_group_address = Column(TEXT, nullable=True)
 
     def __repr__(self):
-        return "<Base_item(developer_group_id='%s', developer_group_name='%s', author_id='%s',\
+        return "<Base_item(developer_group_id='%s', developer_group_name='%s',\
                             developer_group_address='%s', date_scraped='%s', source_id='%s')>"\
         %(self.url, self.article_text, self.author_id,
             self.date_published, self.date_scraped, self.source_id)
