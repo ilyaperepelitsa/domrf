@@ -74,7 +74,8 @@ class DeveloperData(Base_item):
     rating = Column(INTEGER)
 
     def __repr__(self):
-        return "<Base_item(author_id='%s', author_name='%s')>"\
+        return "<Base_item(author_id='%s', author_name='%s',
+            )>"\
         %(self.author_id, self.author_name)
 
 Base_item.metadata.create_all(engine_test)
