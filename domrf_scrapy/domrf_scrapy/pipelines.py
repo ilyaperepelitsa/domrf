@@ -74,7 +74,7 @@ class DataPipeline(object):
     def process_item(self, item, spider):
 
         data_entry = {"developer_group_id" : item["developer_group_id"],
-                            "region_id" : item["developer_group_name"],
+                            "region_id" : item["region_id"],
                             "startDate" : item["developer_group_address"],
                             "endDate" : item["developer_group_name"],
                             "total_living_floor_size" : item["developer_group_name"],
