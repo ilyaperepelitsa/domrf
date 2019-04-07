@@ -73,7 +73,8 @@ class DomrfSpiderSpider(scrapy.Spider):
             headers = self.headers,
             callback=self.parse_developer_report
         )
-
+        yield alt_details_request
+        
     def parse_developer_report(self, response):
 
         developer = response.meta['developer']
