@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Enum, ForeignKey
-from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER
+from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
 from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
