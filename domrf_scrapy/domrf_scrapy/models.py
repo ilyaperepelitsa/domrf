@@ -79,8 +79,8 @@ class DeveloperData(Base_item):
                         endDate='%s', total_living_floor_size='%s'\
                         appt_num='%s', object_count='%s'\
                         total_living_floor_size_pct='%s', typed_volume_pct='%s'\
-                        rating='%s', author_name='%s')>"\
-        %(self.author_id, self.author_name)
+                        rating='%s')>"\
+        %(self.author_id, self.author_name,)
 
 Base_item.metadata.create_all(engine_test)
 Session_test = sessionmaker(bind = engine_test)
