@@ -63,7 +63,7 @@ class DomrfSpiderSpider(scrapy.Spider):
 
         developer = response.meta['developer']
         developer_data = response.meta['developer_data']
-        developer_group_address = json.loads(response.body_as_unicode())["developer_group_address"]
+        developer_group_address = json.loads(response.body_as_unicode())
 
         report_data_request =  Request(
             "https://наш.дом.рф/аналитика/grapi/v1/entityInfoDateRange?id={developer_id}&type=devGroup".format(**{"developer_id" : developer["developer_group_id"]}),
