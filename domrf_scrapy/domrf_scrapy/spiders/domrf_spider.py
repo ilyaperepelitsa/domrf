@@ -47,6 +47,7 @@ class DomrfSpiderSpider(scrapy.Spider):
     def parse_developer_detailed(self, response):
 
         developer = response.meta['developer']
+        
         alt_details_request =  Request(
             "https://наш.дом.рф/аналитика/grapi/v1/developer_group_info?developerGroupId={developer_id}".format(**{"developer_id" : developer["developer_group_id"]}),
             meta={'developer': developer}
