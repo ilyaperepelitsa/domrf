@@ -18,8 +18,9 @@ class DomrfScrapyPipeline(object):
         item["developer_group_address"] = item["url"][0]
 
         item["region_id"] = item["url"][0]
-        item["url"] = item["url"][0]
-        item["url"] = item["url"][0]
+        item["region_name"] = item["url"][0]
+
+        item["startDate"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
         item["url"] = item["url"][0]
