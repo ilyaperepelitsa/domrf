@@ -1,2 +1,2 @@
-domrf_scrapy
-from domrf_scrapy.models import *
+# domrf_scrapy
+from models import *
