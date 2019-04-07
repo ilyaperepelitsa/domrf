@@ -92,12 +92,12 @@ class DomrfSpiderSpider(scrapy.Spider):
 
         domrf_item.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
         domrf_item.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
-        article.add_xpath("job_company", '//meta[@name="description"]/@content')
-        article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]//*[not(name()="ul") and not(name()="ol") and not(name()="li")]/text()')
-        article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]/text()')
-        article.add_xpath("job_lists", '//div[contains(@class, "jobDescriptionContent")]//li/text()')
-        article.add_xpath("job_apply_link", '//div[@class = "cell"]/a/@href')
-        article.add_xpath("job_apply_text", '//div[@class = "cell"]/a//text()')
+        domrf_item.add_xpath("job_company", '//meta[@name="description"]/@content')
+        domrf_item.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]//*[not(name()="ul") and not(name()="ol") and not(name()="li")]/text()')
+        domrf_item.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]/text()')
+        domrf_item.add_xpath("job_lists", '//div[contains(@class, "jobDescriptionContent")]//li/text()')
+        domrf_item.add_xpath("job_apply_link", '//div[@class = "cell"]/a/@href')
+        domrf_item.add_xpath("job_apply_text", '//div[@class = "cell"]/a//text()')
 
         article.add_xpath("company_website", '//div[@class = "infoEntity"]//span[@class = "value website"]/a/@href')
         article.add_xpath("company_size", '//div[@class]/*[contains(text(), "Size")]/following-sibling::span[@class = "value"]/text()')
