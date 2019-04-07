@@ -12,4 +12,5 @@ from sqlalchemy.sql import exists
 
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
+        item["url"] = "".join(item["url"])
         return item
