@@ -40,7 +40,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                 headers = self.headers,
                 callback=self.parse_list
             )
-            yield
+            yield developer_details_request
 
         return {"pew" : json.loads(response.body_as_unicode())}
 
