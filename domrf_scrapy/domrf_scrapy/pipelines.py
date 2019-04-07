@@ -46,9 +46,8 @@ class DeveloperPipeline(object):
                     Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
 
         if not developer_exists:
-            adding_url = Developer(**developer_entry)
+            adding_developer = Developer(**developer_entry)
             session_test.add(adding_url)
-            session_test.commit()
             session_test.commit()
 
         yield item
