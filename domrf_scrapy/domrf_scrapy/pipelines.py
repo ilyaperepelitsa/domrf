@@ -13,7 +13,11 @@ from sqlalchemy.sql import exists
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
 
-        item["url"] = item["url"
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        item["url"] = item["url"][0]
+        
 
         developer_group_id = Field()
         developer_group_name = Field()
