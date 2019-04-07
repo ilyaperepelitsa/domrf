@@ -17,4 +17,4 @@ class DomrfSpiderSpider(scrapy.Spider):
         )
         yield PR
 
-def parse(self, response):
+    def parse(self, response):
