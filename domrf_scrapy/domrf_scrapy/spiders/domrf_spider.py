@@ -90,23 +90,11 @@ class DomrfSpiderSpider(scrapy.Spider):
         domrf_item.add_value('source', "glassdoor")
         domrf_item.add_value('name', 'test')
 
-        domrf_item.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
-        domrf_item.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
-        domrf_item.add_xpath("job_company", '//meta[@name="description"]/@content')
-        domrf_item.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]//*[not(name()="ul") and not(name()="ol") and not(name()="li")]/text()')
-        domrf_item.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]/text()')
-        domrf_item.add_xpath("job_lists", '//div[contains(@class, "jobDescriptionContent")]//li/text()')
-        domrf_item.add_xpath("job_apply_link", '//div[@class = "cell"]/a/@href')
-        domrf_item.add_xpath("job_apply_text", '//div[@class = "cell"]/a//text()')
-
-        domrf_item.add_xpath("company_website", '//div[@class = "infoEntity"]//span[@class = "value website"]/a/@href')
-        domrf_item.add_xpath("company_size", '//div[@class]/*[contains(text(), "Size")]/following-sibling::span[@class = "value"]/text()')
-        domrf_item.add_xpath("company_type", '//div[@class]/*[contains(text(), "Type")]/following-sibling::span[@class = "value"]/text()')
-        domrf_item.add_xpath("company_revenue", '//div[@class]/*[contains(text(), "Revenue")]/following-sibling::span[@class = "value"]/text()')
-        domrf_item.add_xpath("company_headquarters", '//div[@class]/*[contains(text(), "Headquarters")]/following-sibling::span[@class = "value"]/text()')
-        domrf_item.add_xpath("company_founded", '//div[@class]/*[contains(text(), "Founded")]/following-sibling::span[@class = "value"]/text()')
-        domrf_item.add_xpath("company_industry", '//div[@class]/*[contains(text(), "Industry")]/following-sibling::span[@class = "value"]/text()')
-
+        domrf_item.add_value('name', 'test')
+        domrf_item.add_value('name', 'test')
+        domrf_item.add_value('name', 'test')
+        domrf_item.add_value('name', 'test')
+        domrf_item.add_value('name', 'test')
         item = article.load_item()
         yield(item)
 
