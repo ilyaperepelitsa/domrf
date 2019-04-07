@@ -40,7 +40,7 @@ class DeveloperPipeline(object):
         yield item
 
 
-class Regio(object):
+class RegionPipeline(object):
     def process_item(self, item, spider):
 
 
