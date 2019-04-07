@@ -87,4 +87,4 @@ class DataPipeline(object):
             session_test.add(adding_data)
             session_test.commit()
 
-        yield item
+        return item
