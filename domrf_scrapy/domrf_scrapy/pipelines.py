@@ -13,7 +13,7 @@ from sqlalchemy.sql import exists
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
 
-        item["url"] = "".join(item["url"])
+        item["url"] = item["url"
 
         developer_group_id = Field()
         developer_group_name = Field()
@@ -28,5 +28,5 @@ class DomrfScrapyPipeline(object):
         total_living_floor_size_pct = Field()
         typed_volume_pct = Field()
         rating = Field()
-        
+
         return item
