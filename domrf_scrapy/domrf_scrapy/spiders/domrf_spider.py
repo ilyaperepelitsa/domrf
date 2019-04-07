@@ -82,7 +82,7 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
 
-        return {"developer" : type(developer,
-                "developer_data" : developer_data,
+        return {"developer" : type(developer),
+                "developer_data" : type(developer_data,
                 "developer_group_address" : developer_group_address,
                 "developer_report" : developer_report}
