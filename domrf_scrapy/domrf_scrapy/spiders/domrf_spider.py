@@ -84,14 +84,14 @@ class DomrfSpiderSpider(scrapy.Spider):
         developer_group_address = response.meta['developer_group_address']
         developer_report = json.loads(response.body_as_unicode())["payload"]
 
-        domrf = ItemLoader(item = DomRFItem(), response = response)
+        domrf_item = ItemLoader(item = DomRFItem(), response = response)
 
         # article.add_xpath("url", '//meta[@property = "og:url"]/@content')
-        article.add_value('source', "glassdoor")
-        article.add_value('url', response.url)
+        domrf_item.add_value('source', "glassdoor")
+        domrf_item.add_value('url', response.url)
 
-        article.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
-        article.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
+        domrf_item.add_xpath("job_position", '//div/*[contains(@class, "noMargTop")]/text()')
+        domrf_item.add_xpath("job_salary_med", '//meta[@name="description"]/@content')
         article.add_xpath("job_company", '//meta[@name="description"]/@content')
         article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]//*[not(name()="ul") and not(name()="ol") and not(name()="li")]/text()')
         article.add_xpath("job_text", '//div[contains(@class, "jobDescriptionContent")]/text()')
