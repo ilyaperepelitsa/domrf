@@ -64,7 +64,7 @@ class RegionPipeline(object):
                     Region.region_name == region_entry['region_name']))).scalar()
 
         if not region_exists:
-            adding_developer = Developer(**developer_entry)
+            adding_developer = Region(**developer_entry)
             session_test.add(adding_developer)
             session_test.commit()
 
