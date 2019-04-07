@@ -99,7 +99,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                     domrf_item.add_value('developer_group_address',
                             developer_group_address['developer_group_address'])
 
-                domrf_item.add_value('region_id', value["developer_group_name"])
+                domrf_item.add_value('region_id', value["region_id"])
                 domrf_item.add_value('region_name', value["developer_group_name"])
 
                 domrf_item.add_value('startDate', developer_report)
@@ -110,7 +110,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('object_count', value["developer_group_name"])
                 domrf_item.add_value('total_living_floor_size_pct', value["developer_group_name"])
                 domrf_item.add_value('typed_volume_pct', value["developer_group_name"])
-                domrf_item.add_value('rating', value)
+                domrf_item.add_value('rating', value["developer_group_name"])
 
                 item = domrf_item.load_item()
                 yield(item)
