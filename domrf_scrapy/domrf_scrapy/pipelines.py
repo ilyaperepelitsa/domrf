@@ -41,8 +41,8 @@ class DeveloperPipeline(object):
                             "developer_group_address" : item["developer_group_address"]}
 
         developer_exists = session_test.query(exists().where(and_(
-                    Developer.name == developer_entry'leela',
-                    Developer.fullname == 'leela dharan',
+                    Developer.name == developer_entry['leela'],
+                    Developer.fullname == developer_entry['leela'],
                     Developer.fullname == 'leela dharan'))).scalar()
 
         filter(and_(User.name == 'leela', User.fullname == 'leela dharan'))
