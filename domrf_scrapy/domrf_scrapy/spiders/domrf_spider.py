@@ -113,7 +113,7 @@ class DomrfSpiderSpider(scrapy.Spider):
                 domrf_item.add_value('rating', value["rating"])
 
                 item = domrf_item.load_item()
-                yield(item)
+                yield(item
 
         return {#dict
                 # "developer" : developer,
