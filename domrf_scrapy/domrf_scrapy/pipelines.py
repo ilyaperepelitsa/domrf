@@ -6,6 +6,8 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 from news.models import *
 from sqlalchemy.sql import select
+from sqlalchemy import and_
+from sqlalchemy.exc import OperationalError
 
 class DomrfScrapyPipeline(object):
     def process_item(self, item, spider):
