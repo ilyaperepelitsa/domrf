@@ -36,7 +36,7 @@ class DomrfScrapyPipeline(object):
 class DeveloperPipeline(object):
     def process_item(self, item, spider):
 
-        developer_entry = {"url" : item["url"],
+        developer_entry = {"developer_group_id" : item["url"],
                             "url" : item["url"],
                             "url" : item["url"]}
 
