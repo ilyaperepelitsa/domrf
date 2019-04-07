@@ -21,11 +21,11 @@ class DomrfSpiderSpider(scrapy.Spider):
     #     yield PR
 
     def parse(self, response):
-        PR = Request(
+        PR = FormRequest(
             "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
             callback=self.parse_list
         )
         yield PR
 
     def parse_list(self, response):
-        return response.body
+        return response.headers
