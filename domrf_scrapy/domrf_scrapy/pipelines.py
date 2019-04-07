@@ -73,18 +73,18 @@ class RegionPipeline(object):
 class DataPipeline(object):
     def process_item(self, item, spider):
 
-developer_entry = {"developer_group_id" : item["developer_group_id"],
-                    "developer_group_name" : item["developer_group_name"],
-                    "developer_group_address" : item["developer_group_address"]}
+        data_emt = {"developer_group_id" : item["developer_group_id"],
+                            "developer_group_name" : item["developer_group_name"],
+                            "developer_group_address" : item["developer_group_address"]}
 
-developer_exists = session_test.query(exists().where(and_(
-            Developer.developer_group_id == developer_entry['developer_group_id'],
-            Developer.developer_group_name == developer_entry['developer_group_name'],
-            Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
+        developer_exists = session_test.query(exists().where(and_(
+                    Developer.developer_group_id == developer_entry['developer_group_id'],
+                    Developer.developer_group_name == developer_entry['developer_group_name'],
+                    Developer.developer_group_address == developer_entry['developer_group_address']))).scalar()
 
-if not developer_exists:
-    adding_developer = Developer(**developer_entry)
-    session_test.add(adding_developer)
-    session_test.commit()
+        if not developer_exists:
+            adding_developer = Developer(**developer_entry)
+            session_test.add(adding_developer)
+            session_test.commit()
 
-yield item
+        yield item
