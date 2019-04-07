@@ -40,7 +40,7 @@ class DeveloperPipeline(object):
                             "developer_group_name" : item["developer_group_name"],
                             "developer_group_address" : item["developer_group_address"]}
 
-        url_exists = session_test.query(exists().where(Url_entry.url==item["url"])).scalar()
+        developer_exists = session_test.query(exists().where(Url_entry.url==item["url"])).scalar()
         if not url_exists:
             adding_url = Url_entry(**url_entry)
             session_test.add(adding_url)
