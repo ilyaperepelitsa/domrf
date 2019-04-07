@@ -78,7 +78,7 @@ class DeveloperData(Base_item):
                         region_id='%s', startDate='%s'\
                         endDate='%s', total_living_floor_size='%s'\
                         appt_num='%s', object_count='%s'\
-                        total_living_floor_size_pct='%s', author_name='%s'\
+                        total_living_floor_size_pct='%s', typed_volume_pct='%s'\
                         author_id='%s', author_name='%s')>"\
         %(self.author_id, self.author_name)
 
