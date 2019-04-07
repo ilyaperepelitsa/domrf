@@ -10,5 +10,5 @@ from scrapy.item import Item, Field
 
 class FercItem(scrapy.Item):
     developer_group_id = Field()
-    files = Field()
+    developer_group_name = Field()
     pass
