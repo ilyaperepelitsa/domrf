@@ -28,8 +28,8 @@ class DomrfSpiderSpider(scrapy.Spider):
             "Accept": */*
 "Accept-Encoding": gzip, deflate, br
 "Accept-Language": en-US,en;q=0.9
-Connection: keep-alive
-content-type: application/json
+"Connection": keep-alive
+"content-type": application/json
 
 
             callback=self.parse_list
