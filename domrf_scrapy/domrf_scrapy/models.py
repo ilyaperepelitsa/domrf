@@ -32,7 +32,7 @@ from sqlalchemy.sql import exists
 engine_test = create_engine('sqlite:///domrf.db')
 # engine_test = create_engine('postgres://postgres:qwerty123@localhost:5432/domrf')
 Base_item = declarative_base()
-
+# q = (session_test.query(Region).all())
 # class Url_entry(Base_item):
 #     __tablename__ = "urls"
 #     url_id = Column(INTEGER, primary_key = True)
