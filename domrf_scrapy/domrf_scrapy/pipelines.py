@@ -22,35 +22,36 @@ class DomrfScrapyPipeline(object):
 
         item["startDate"] = item["startDate"][0]
         item["endDate"] = item["endDate"][0]
+
         try:
             item["total_living_floor_size"] = int(item["total_living_floor_size"][0])
         except:
-            item["total_living_floor_size"] = None
+            item["total_living_floor_size"] = int(0)
 
         try:
             item["appt_num"] = int(item["appt_num"][0])
         except:
-            item["appt_num"] = None
+            item["appt_num"] = int(0)
 
         try:
             item["object_count"] = int(item["object_count"][0])
         except:
-            item["object_count"] = None
+            item["object_count"] = int(0)
 
         try:
             item["total_living_floor_size_pct"] = float(item["total_living_floor_size_pct"][0])
         except:
-            item["total_living_floor_size_pct"] = None
+            item["total_living_floor_size_pct"] = float(0)
 
         try:
             item["typed_volume_pct"] = float(item["typed_volume_pct"][0])
         except:
-            item["typed_volume_pct"] = None
+            item["typed_volume_pct"] = float(0)
 
         try:
             item["rating"] = int(item["rating"][0])
         except:
-            item["rating"] = None
+            item["rating"] = int(0)
         return item
 
 
