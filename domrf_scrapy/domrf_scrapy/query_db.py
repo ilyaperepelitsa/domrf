@@ -12,3 +12,6 @@ docker run --name domrf -e POSTGRES_PASSWORD=qwerty123 -d postgres
 
 
 docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
+
+
+q = (session_test.query(Trade_aggregation_entry).all())
