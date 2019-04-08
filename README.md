@@ -8,15 +8,18 @@
 Различия в конкретных ячейках не тестировались.
 
 ## Структура данных:
-* developer_group_id
-* developer_group_name
-* developer_group_address
-* region_id
-* startDate
-* endDate
-* total_living_floor_size
-* appt_num
-* object_count
+* developer_group_id - ID Девелопера (источник - API)
+* developer_group_name - наименование девелопера
+* developer_group_address - адрес девелопера
+* region_id - ID региона (источник - API)
+* startDate - начало отчетного периода. Даты отчета используются как ключи для
+идентификации новых данных. При появлении новых дат приложение добавит новые
+данные для построения временных рядов с расчетом на то, что данные дом.рф будут
+меняться со временем.
+* endDate - конец отчетного периода
+* total_living_floor_size - площадь строящегося жилья, м²
+* appt_num - количество строящихся квартир
+* object_count - количество строящихся домов
 * total_living_floor_size_pct
 * typed_volume_pct
 * rating
