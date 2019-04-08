@@ -15,6 +15,6 @@ from domrf_scrapy.domrf_scrapy.models_test import *
 #
 
 q = (session_test.query(DeveloperData, Developer, Region)
-            .join(Developer, DeveloperData.trade_regime == Trade_regime.id)
+            .join(Developer, DeveloperData.developer_group_id == Developer.developer_group_id)
             .join(Region, DeveloperData.reporter == Reporter.id)
             .all())
