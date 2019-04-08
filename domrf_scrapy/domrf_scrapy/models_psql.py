@@ -98,3 +98,4 @@ session_test = Session_test()
 
 
 q = session_test.query(Region).all()
+q
