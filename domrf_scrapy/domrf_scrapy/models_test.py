@@ -29,7 +29,7 @@ from sqlalchemy.sql import exists
 
 
 # engine_test = create_engine('postgres://postgres:mysecretpassword@0.0.0.0:5432/domrf')
-engine_test = create_engine("sqlite:////Users/ilyaperepelitsa/quant/scrape_jobs/domrf.db")
+engine_test = create_engine("sqlite:////Users/ilyaperepelitsa/quant/domrf/domrf_scrapy/domrf.db")
 # engine_test = create_engine('postgres://postgres:qwerty123@localhost:5432/domrf')
 Base_item = declarative_base()
 # q = (session_test.query(Region).all())
@@ -95,3 +95,6 @@ class DeveloperData(Base_item):
 Base_item.metadata.create_all(engine_test)
 Session_test = sessionmaker(bind = engine_test)
 session_test = Session_test()
+
+
+q = session_test.query(Region).all()
