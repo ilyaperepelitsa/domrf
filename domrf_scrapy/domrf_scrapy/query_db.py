@@ -2,7 +2,7 @@
 from domrf_scrapy.domrf_scrapy.models import *
 
 # docker run --name domrf -e POSTGRES_PASSWORD=qwerty123 -e POSTGRES_USER=vtbuser -d postgres
-docker run --name domrf -e POSTGES_USER=vtbuser -e POSTGRES_PASSWORD=qwerty123 -e POSTGRES_DB=domrf
+docker run --name domrf -e POSTGES_USER=vtbuser -e POSTGRES_PASSWORD=qwerty123 -e POSTGRES_DB=domrf postgres
 docker run --name postgres1 --network postgres-network -e POSTGRES_PASSWORD=qwerty123 -d postgres
 
 docker network create --driver bridge postgres-network
