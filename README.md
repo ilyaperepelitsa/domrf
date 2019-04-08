@@ -7,7 +7,21 @@
 Отличие - scrapy файл - на базе SQL с допущением NULL при отсутствии значений.
 Различия в конкретных ячейках не тестировались.
 
-Структура репозитория:
+## Структура данных:
+* developer_group_id
+* developer_group_name
+* developer_group_address
+* region_id
+* startDate
+* endDate
+* total_living_floor_size
+* appt_num
+* object_count
+* total_living_floor_size_pct
+* typed_volume_pct
+* rating
+
+## Структура репозитория:
 * data.csv - файл с выгрузкой через скрипт test_api.py
 * data_missing.csv - неотсортированный (есть дубликаты) список девелоперов по
 которым нет данных
