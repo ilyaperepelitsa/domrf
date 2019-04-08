@@ -14,34 +14,12 @@ from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY, BIGINT
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
-# import keys
-# import pkg_resources
-# json_path = pkg_resources.resource_filename('credentials', 'passwords.json')
-
-# root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-# json_path = os.path.join(root_path, "credentials/passwords.json")
-
-# data = json.load(open(json_path))
-
-# json.loads(s)
-
-# dataslap_postgres = data["aws"]["personal"]["dataslap"]["postgres"]["free_20gb"]["dataslap_user"]
-# dataslap_postgres = keys.get_dataslap_postgres()
 
 
 engine_test = create_engine('postgres://vtbuser:example@postgres_domrf:5432/domrf_test')
 # engine_test = create_engine("sqlite:////Users/ilyaperepelitsa/quant/domrf/domrf_scrapy/domrf.db")
 # engine_test = create_engine('postgres://postgres:qwerty123@localhost:5432/domrf')
 Base_item = declarative_base()
-# q = (session_test.query(Region).all())
-# class Url_entry(Base_item):
-#     __tablename__ = "urls"
-#     url_id = Column(INTEGER, primary_key = True)
-#     url = Column(TEXT, unique = True)
-#
-#     def __repr__(self):
-#         return "<Base_item(url_id='%s', url='%s')>"\
-#         %(self.url_id, self.url)
 
 class Developer(Base_item):
     __tablename__ = "developers"
