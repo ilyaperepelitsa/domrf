@@ -1,6 +1,6 @@
 # domrf_scrapy
 from domrf_scrapy.domrf_scrapy.models_test import *
-
+import os
 # # docker run --name domrf -e POSTGRES_PASSWORD=qwerty123 -e POSTGRES_USER=vtbuser -d postgres
 # docker run --name domrf -e POSTGES_USER=vtbuser -e POSTGRES_PASSWORD=qwerty123 -e POSTGRES_DB=domrf postgres
 #
@@ -38,6 +38,9 @@ test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_add
        'total_living_floor_size', 'appt_num', 'object_count',
        'total_living_floor_size_pct', 'typed_volume_pct', 'rating']
        ].T.drop_duplicates().T
+
+
+(os.path.abspath(os.path.join('/home/username', '..')))
 
 
        # df.loc[:,~df.columns.duplicated()]
