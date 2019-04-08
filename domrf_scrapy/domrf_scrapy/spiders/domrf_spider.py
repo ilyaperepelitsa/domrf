@@ -39,8 +39,6 @@ class DomrfSpiderSpider(scrapy.Spider):
             )
             yield developer_details_request
 
-        # return {"pew" : json.loads(response.body_as_unicode())}
-
     def parse_developer_detailed(self, response):
 
         developer = response.meta['developer']
@@ -109,13 +107,3 @@ class DomrfSpiderSpider(scrapy.Spider):
 
                 item = domrf_item.load_item()
                 yield item
-
-        # return {#dict
-        #         # "developer" : developer,
-        #         #list
-        #         "developer_data" : developer_data,
-        #         #list
-        #         # "developer_group_address" : developer_group_address,
-        #         #dict
-        #         # "developer_report" : developer_report
-        #         }
