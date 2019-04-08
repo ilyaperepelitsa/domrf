@@ -37,10 +37,8 @@ test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_add
        'region_name',  'startDate', 'endDate',
        'total_living_floor_size', 'appt_num', 'object_count',
        'total_living_floor_size_pct', 'typed_volume_pct', 'rating']
-       ].T.drop_duplicates().T
+       ].T.drop_duplicates().T.to_csv(os.path.join(os.path.dirname(os.getcwd()), "domrf", "scrapy_data.csv"))
 
-
-os.path.abspath("__file__")
 
 
        # df.loc[:,~df.columns.duplicated()]
