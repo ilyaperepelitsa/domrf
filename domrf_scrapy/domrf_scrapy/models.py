@@ -71,7 +71,7 @@ class DeveloperData(Base_item):
     startDate = Column(VARCHAR(20))
     endDate = Column(VARCHAR(20))
 
-    total_living_floor_size = Column(INTEGER, nullable=False)
+    total_living_floor_size = Column(INTEGER, nullable=True)
     appt_num = Column(INTEGER, nullable=False)
     object_count = Column(INTEGER, nullable=False)
     total_living_floor_size_pct = Column(FLOAT, nullable=False)
