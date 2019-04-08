@@ -64,7 +64,7 @@ class Region(Base_item):
 
 
 class DeveloperData(Base_item):
-    __tablename__ = "authors"
+    __tablename__ = "developer_Data"
     id = Column(INTEGER, primary_key = True)
     developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
     region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
