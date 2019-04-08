@@ -98,7 +98,7 @@ Session_test = sessionmaker(bind = engine_test)
 session_test = Session_test()
 
 
-q = session_test.query(Developer).all()
-# # session_test.rollback()
-# q
-len(q)
+# q = session_test.query(DeveloperData).all()
+# # # session_test.rollback()
+# # q
+# len(q)
