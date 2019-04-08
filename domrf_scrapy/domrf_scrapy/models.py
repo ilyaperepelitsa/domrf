@@ -5,8 +5,11 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Enum, ForeignKey
-from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
-from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
+
+from sqlalchemy.types import TEXT, VARCHAR, INTEGER, FLOAT, TIMESTAMP, ARRAY
+
+# from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
+# from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
@@ -25,7 +28,7 @@ from sqlalchemy.sql import exists
 # dataslap_postgres = keys.get_dataslap_postgres()
 
 
-engine_test = create_engine('postgres://postgres::mysecretpassword@0.0.0.0:5432/domrf')
+engine_test = create_engine('postgres://postgres:mysecretpassword@0.0.0.0:5432/domrf')
 # engine_test = create_engine('postgres://postgres:qwerty123@localhost:5432/domrf')
 Base_item = declarative_base()
 
