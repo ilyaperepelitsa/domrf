@@ -10,6 +10,7 @@ from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 
 from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
 from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
+
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
