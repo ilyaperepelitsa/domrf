@@ -8,6 +8,7 @@ from domrf_scrapy.items import DomRFItem
 
 class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
+    'http://splash:9050'
     custom_settings = {
         "HTTP_PROXY":'127.0.0.1:8118',
         "DOWNLOAD_DELAY": 0,
