@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-import requests
+# import requests
 from scrapy.http import Request
 from scrapy.loader import ItemLoader
 import json
