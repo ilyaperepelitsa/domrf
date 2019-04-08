@@ -12,28 +12,14 @@ class DomrfSpiderSpider(scrapy.Spider):
     custom_settings = {
         "HTTP_PROXY":'http://tor:9050',
         "DOWNLOAD_DELAY": 0,
-        # "DOWNLOADER_MIDDLEWARES": {
-        #     'myproject.middlewares.RandomUserAgentMiddleware': 400,
-        #     'myproject.middlewares.ProxyMiddleware': 410,
-        #     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None}
-        }
-    # allowed_domains = ['наш.дом.рф']
+
     start_urls = ['https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group']
     headers = {"Accept": "*/*",
                 "Accept-Encoding": "gzip, deflate, br",
                 "Accept-Language": "en-US,en;q=0.9",
                 "Connection": "keep-alive",
                 "content-type": "application/json"}
-    #
-    # def parse(self, response):
-    #
-    #     PR = Request(
-    #         "https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group",
-    #         # headers=self.headers,
-    #         # meta={'newrequest': Request('htp//sitetoscrape.com',  headers=self.headers),},
-    #         callback=self.parse_PR
-    #     )
-    #     yield PR
+
 
     def parse(self, response):
         PR = Request(
