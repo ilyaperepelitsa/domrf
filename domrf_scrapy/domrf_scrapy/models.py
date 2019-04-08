@@ -72,11 +72,11 @@ class DeveloperData(Base_item):
     endDate = Column(VARCHAR(20))
 
     total_living_floor_size = Column(INTEGER, nullable=True)
-    appt_num = Column(INTEGER, nullable=False)
-    object_count = Column(INTEGER, nullable=False)
-    total_living_floor_size_pct = Column(FLOAT, nullable=False)
-    typed_volume_pct = Column(FLOAT, nullable=False)
-    rating = Column(INTEGER, nullable=False)
+    appt_num = Column(INTEGER, nullable=True)
+    object_count = Column(INTEGER, nullable=True)
+    total_living_floor_size_pct = Column(FLOAT, nullable=True)
+    typed_volume_pct = Column(FLOAT, nullable=True)
+    rating = Column(INTEGER, nullable=True)
 
     def __repr__(self):
         return "<Base_item(id='%s', developer_group_id='%s',\
