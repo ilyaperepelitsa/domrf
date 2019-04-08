@@ -33,6 +33,7 @@
 которым нет данных
 * scrapy_data.csv - идентичный файл-выгрузка с использованием scrapy и sqlite
 * docker-compose.yml - докер файл для деплоймента полного scrapy приложения
+* domrf_scrapy - scrapy приложение
 
 ## Описание
 
