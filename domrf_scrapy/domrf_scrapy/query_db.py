@@ -32,7 +32,14 @@ q
 test_df = pd.concat([pd.DataFrame(list(map(lambda x: inst_to_dict(x[0]), q))),
                                 pd.DataFrame(list(map(lambda x: inst_to_dict(x[1]), q))),
                                 pd.DataFrame(list(map(lambda x: inst_to_dict(x[2]), q)))], axis = 1)
-test_df
+test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_address', 'region_id',
+       'region_name',  'startDate', 'endDate',
+       'total_living_floor_size', 'appt_num', 'object_count',
+       'total_living_floor_size_pct', 'typed_volume_pct', 'rating']
+       ].loc[:,~df.columns.duplicated()]
+
+
+       df.loc[:,~df.columns.duplicated()]
 
 
  # 'start_time': datetime.datetime(2019, 4, 8, 9, 31, 27, 534769)}
