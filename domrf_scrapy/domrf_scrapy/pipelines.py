@@ -30,7 +30,7 @@ class DomrfScrapyPipeline(object):
         item["typed_volume_pct"] = float(item["typed_volume_pct"][0])
         item["rating"] = int(item["rating"][0])
 
-        yield item
+        return item
 
 
 class DeveloperPipeline(object):
@@ -50,7 +50,7 @@ class DeveloperPipeline(object):
             session_test.add(adding_developer)
             session_test.commit()
 
-        yield item
+        return item
 
 
 class RegionPipeline(object):
@@ -68,7 +68,7 @@ class RegionPipeline(object):
             session_test.add(adding_region)
             session_test.commit()
 
-        yield item
+        return item
 
 class DataPipeline(object):
     def process_item(self, item, spider):
