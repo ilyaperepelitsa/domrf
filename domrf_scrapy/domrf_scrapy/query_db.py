@@ -16,7 +16,7 @@ q = (session_test.query(DeveloperData, Developer, Region)
             .join(Developer, DeveloperData.developer_group_id == Developer.developer_group_id)
             .join(Region, DeveloperData.region_id == Region.region_id)
             .all())
-len(q)
+# len(q)
 
 test_df = pd.concat([pd.DataFrame(list(map(lambda x: inst_to_dict(x[0]), q))),
                                 pd.DataFrame(list(map(lambda x: inst_to_dict(x[1]), q))),
@@ -32,6 +32,6 @@ test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_add
  # 'start_time': datetime.datetime(2019, 4, 8, 9, 31, 27, 534769)}
  # 'finish_time': datetime.datetime(2019, 4, 8, 9, 46, 22, 517572),
 
-# import itertools
+import itertools
 
 # list(itertools.compress([1, 2, 3], [True, True, False]))
