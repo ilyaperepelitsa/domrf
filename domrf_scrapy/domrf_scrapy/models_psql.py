@@ -67,8 +67,8 @@ class Region(Base_item):
 class DeveloperData(Base_item):
     __tablename__ = "developer_Data"
     id = Column(Integer, primary_key = True)
-    developer_group_id = Column(BIGINT, ForeignKey("developers.developer_group_id"), nullable=False)
-    region_id = Column(BIGINT, ForeignKey("regions.region_id"), nullable=False)
+    developer_group_id = Column(VARCHAR(20), ForeignKey("developers.developer_group_id"), nullable=False)
+    region_id = Column(VARCHAR(20), ForeignKey("regions.region_id"), nullable=False)
     startDate = Column(VARCHAR(20))
     endDate = Column(VARCHAR(20))
 
