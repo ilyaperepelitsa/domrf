@@ -8,6 +8,14 @@ from domrf_scrapy.items import DomRFItem
 
 class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
+    custom_settings = {
+        "HTTP_PROXY":'127.0.0.1:8118',
+        "DOWNLOAD_DELAY": 0,
+        # "DOWNLOADER_MIDDLEWARES": {
+        #     'myproject.middlewares.RandomUserAgentMiddleware': 400,
+        #     'myproject.middlewares.ProxyMiddleware': 410,
+        #     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None}
+        }
     # allowed_domains = ['наш.дом.рф']
     start_urls = ['https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group']
     headers = {"Accept": "*/*",
