@@ -43,6 +43,6 @@ test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_add
 
        # df.loc[:,~df.columns.duplicated()]
 
-
+# SQLITE 
  # 'start_time': datetime.datetime(2019, 4, 8, 9, 31, 27, 534769)}
  # 'finish_time': datetime.datetime(2019, 4, 8, 9, 46, 22, 517572),
