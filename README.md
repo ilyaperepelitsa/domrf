@@ -20,7 +20,7 @@
 * total_living_floor_size - площадь строящегося жилья, м²
 * appt_num - количество строящихся квартир
 * object_count - количество строящихся домов
-* total_living_floor_size_pct
+* total_living_floor_size_pct - доля застройщика в регионе
 * typed_volume_pct
 * rating
 
