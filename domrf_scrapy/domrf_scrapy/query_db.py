@@ -15,10 +15,9 @@ from domrf_scrapy.domrf_scrapy.models_test import *
 #
 
 q = (session_test.query(DeveloperData, Developer, Region)
-            .filter(and_(Trade_aggregation_entry.reporter == query_params["reporter_id"],
-                        Trade_aggregation_entry.trade_regime == query_params["trade_regime_id"],
-                        Trade_aggregation_entry.classification == query_params["classification"],
-                        Trade_aggregation_entry.aggregation_level == query_params["aggregation_level"]))
+            .filter(and_(DeveloperData.reporter == query_params["reporter_id"],
+                        Developer.trade_regime == query_params["trade_regime_id"],
+                        Region.classification == query_params["classification"]))
             .join(Trade_regime, Trade_aggregation_entry.trade_regime == Trade_regime.id)
             .join(Reporter, Trade_aggregation_entry.reporter == Reporter.id)
             .join(Partner, Trade_aggregation_entry.partner == Partner.id)
