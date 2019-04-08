@@ -8,8 +8,8 @@ from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 
 from sqlalchemy.types import TEXT, VARCHAR, INTEGER, FLOAT, TIMESTAMP, ARRAY
 
-# from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
-# from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
+from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
+from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 
