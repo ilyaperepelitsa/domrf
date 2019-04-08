@@ -98,6 +98,6 @@ Session_test = sessionmaker(bind = engine_test)
 session_test = Session_test()
 
 
-q = session_test.query(Region).all()
-# session_test.rollback()
-q
+# q = session_test.query(Region).all()
+# # session_test.rollback()
+# q
