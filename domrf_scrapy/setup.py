@@ -17,5 +17,5 @@ setup(
     # package_data = {("credenitals", ["credenitals/passwords.json"])},
 
     include_package_data=True,
-    entry_points =  {'scrapy': ['settings = dataslap_jobs.settings']}
+    entry_points =  {'scrapy': ['settings = domrf_scrapy.settings']}
 )
