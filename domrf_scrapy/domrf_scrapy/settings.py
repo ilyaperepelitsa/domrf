@@ -61,6 +61,12 @@ DOWNLOADER_MIDDLEWARES = {
    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810
 }
 
+ITEM_PIPELINES = {
+   'domrf_scrapy.pipelines.DomrfScrapyPipeline': 300,
+   'domrf_scrapy.pipelines.DeveloperPipeline': 400,
+   'domrf_scrapy.pipelines.RegionPipeline': 500,
+   'domrf_scrapy.pipelines.DataPipeline': 600,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
