@@ -45,7 +45,7 @@ Base_item = declarative_base()
 
 class Developer(Base_item):
     __tablename__ = "developers"
-    developer_group_id = Column(BIGINT, primary_key = True)
+    developer_group_id = Column(VARCHAR(20), primary_key = True)
     developer_group_name = Column(TEXT, nullable=False)
     developer_group_address = Column(TEXT, nullable=True)
 
