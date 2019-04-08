@@ -40,7 +40,7 @@ test_df.loc[:,['developer_group_id','developer_group_name', 'developer_group_add
        ].T.drop_duplicates().T
 
 
-(os.path.abspath(os.path.join('/home/username', '..')))
+os.path.abspath("__file__")
 
 
        # df.loc[:,~df.columns.duplicated()]
