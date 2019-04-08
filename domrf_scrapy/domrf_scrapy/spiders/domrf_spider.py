@@ -10,7 +10,7 @@ class DomrfSpiderSpider(scrapy.Spider):
     name = 'domrf_spider'
 
     custom_settings = {
-        "HTTP_PROXY":'http://tor:8118',
+        "HTTP_PROXY":'http://tor:9050',
         "DOWNLOAD_DELAY": 0,
         # "DOWNLOADER_MIDDLEWARES": {
         #     'myproject.middlewares.RandomUserAgentMiddleware': 400,
