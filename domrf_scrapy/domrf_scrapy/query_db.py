@@ -32,3 +32,8 @@ q
 test_df = pd.concat([pd.DataFrame(list(map(lambda x: inst_to_dict(x[0]), q))),
                                 pd.DataFrame(list(map(lambda x: inst_to_dict(x[1]), q))),
                                 pd.DataFrame(list(map(lambda x: inst_to_dict(x[2]), q)))], axis = 1)
+test_df
+
+
+ # 'start_time': datetime.datetime(2019, 4, 8, 9, 31, 27, 534769)}
+ # 'finish_time': datetime.datetime(2019, 4, 8, 9, 46, 22, 517572),
