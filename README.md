@@ -9,7 +9,7 @@
 
 Scrapy в этой среде запускается раз в 12 часов. Чтобы не ждать первого запуска
 долго - можете ввести следующую команду в терминале (после запуска
-docker-compose up).
+docker-compose up):
 
 curl http://0.0.0.0:6801/schedule.json -d project=domrf_scrapy -d
 spider=domrf_spider
