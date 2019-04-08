@@ -9,7 +9,7 @@ from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 # from sqlalchemy.types import TEXT, VARCHAR, INTEGER, FLOAT, TIMESTAMP, ARRAY
 
 from sqlalchemy.dialects.postgresql import TEXT, VARCHAR, INTEGER, FLOAT
-from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY
+from sqlalchemy.dialects.postgresql import TIMESTAMP, ARRAY, BIGINT
 
 from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
@@ -45,7 +45,7 @@ Base_item = declarative_base()
 
 class Developer(Base_item):
     __tablename__ = "developers"
-    developer_group_id = Column(INTEGER, primary_key = True)
+    developer_group_id = Column(BIGINT, primary_key = True)
     developer_group_name = Column(TEXT, nullable=False)
     developer_group_address = Column(TEXT, nullable=True)
 
@@ -56,7 +56,7 @@ class Developer(Base_item):
 
 class Region(Base_item):
     __tablename__ = "regions"
-    region_id = Column(INTEGER, primary_key = True)
+    region_id = Column(BIGINT, primary_key = True)
     region_name = Column(TEXT, nullable=False)
 
     def __repr__(self):
@@ -66,7 +66,7 @@ class Region(Base_item):
 
 class DeveloperData(Base_item):
     __tablename__ = "developer_Data"
-    id = Column(INTEGER, primary_key = True)
+    id = Column(BIGINT, primary_key = True)
     developer_group_id = Column(INTEGER, ForeignKey("developers.developer_group_id"), nullable=False)
     region_id = Column(INTEGER, ForeignKey("regions.region_id"), nullable=False)
     startDate = Column(VARCHAR(20))
