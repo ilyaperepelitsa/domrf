@@ -295,7 +295,3 @@ map(lambda x: x.update({"developer_group_name" : request_data[0]["developer_grou
 developer_data
 # for key,val in developer_data.iteritems():
     # ret[val].append(key)
-
-import urllib
-
-urllib.parse.quote("pew and, pewpew")
