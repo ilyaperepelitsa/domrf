@@ -298,4 +298,4 @@ developer_data
 
 import urllib
 
-urllib.parse.quote(query)
+urllib.parse.quote("pew a")
