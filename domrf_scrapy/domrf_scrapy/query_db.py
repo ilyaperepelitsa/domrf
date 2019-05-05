@@ -19,8 +19,6 @@ def inst_to_dict(inst, delete_id=True):
     dat = {}
     for column in inst.__table__.columns:
         dat[column.name] = getattr(inst, column.name)
-    # if delete_id:
-    #     dat.pop("num")
     return dat
 
 q = (session_test.query(DeveloperData, Developer, Region)
