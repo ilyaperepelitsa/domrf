@@ -11,7 +11,7 @@ class DomrfSpiderSpider(scrapy.Spider):
 
     custom_settings = {
         "HTTP_PROXY":'http://tor:9050',
-        "DOWNLOAD_DELAY": 0,
+        "DOWNLOAD_DELAY": 0,}
 
     start_urls = ['https://наш.дом.рф/аналитика/grapi/v1/dim_developer_group']
     headers = {"Accept": "*/*",
